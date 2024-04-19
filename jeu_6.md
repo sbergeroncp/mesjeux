@@ -1574,7 +1574,7 @@ game.onUpdateInterval(1000, function () {
 
 ```
 
-## Étape 13
+## Étape 12
 
 Ajoute le bloc ``||sprites:définir x||`` (onglet ``||sprites:Sprites||``) sous le bloc ``||variables:définir projectile||``.
 
@@ -1615,7 +1615,8 @@ game.onUpdateInterval(1000, function () {
 
 ```
 
-## Étape 14
+## Étape 13
+
 
 Ajoute le bloc ``||sprites:définir le type||`` (onglet ``||sprites:Sprites||``) sous le bloc ``||sprites:définir x||``.
 
@@ -1652,6 +1653,41 @@ game.onUpdateInterval(1000, function () {
         `, 0, 50)
     ennemi1.x = randint(5, 155)
     ennemi1.setKind(SpriteKind.ennemi1)
+```
+## Étape 4
+
+Voici la programmation du bloc ``||game:quand||``.
+
+Regarde l'indice et apporte les modifications nécessaires au besoin.
+
+```blocks
+
+namespace SpriteKind {
+    export const ennemi1 = SpriteKind.create()
+   }
+let ennemi1: Sprite = null
+game.onUpdateInterval(1000, function () {
+    ennemi1 = sprites.createProjectileFromSide(img`
+        . . . . . b b . . . . . . . . . 
+        . . . . b 5 b b . . . . . . . . 
+        . . b b 5 5 5 b b b . . . . . . 
+        . b 5 5 5 5 5 5 5 b . . b . . . 
+        . . b b 5 5 5 b b . . b 5 b . . 
+        . . b 5 5 b 5 5 b . b 5 5 5 b . 
+        . . b 5 b b b 5 b . . b 5 b . . 
+        . . b b . . b b b . . b b b . . 
+        . b 5 b b . . . . . b 5 b . . . 
+        b 5 5 5 b b . . . b b 5 b b . . 
+        . b 5 b b 5 b . b 5 5 5 5 5 b . 
+        . b b b 5 5 5 b b b 5 5 5 b b . 
+        . . b 5 5 5 5 5 b b 5 b 5 b . . 
+        . . . b 5 5 5 b . . b b b . . . 
+        . . . b 5 b 5 b . . . . . . . . 
+        . . . b b b b b . . . . . . . . 
+        `, 0, 50)
+    ennemi1.x = randint(5, 155)
+    ennemi1.setKind(SpriteKind.ennemi1)
+
 ```
 
 ## Étape 15
