@@ -1656,7 +1656,7 @@ game.onUpdateInterval(1000, function () {
 
 ## Étape 15
 
-Dupplique le bloc ``||game:quand mise àjour du jeu chaque 1000 ms||``.
+Dupplique le bloc ``||game:quand mise à jour du jeu chaque 1000 ms||``.
 
 Remplace la valeur ``||game:1000||`` par ``||game:2500||``.
 
@@ -1844,7 +1844,7 @@ game.onUpdateInterval(5000, function () {
     ennemi1.setKind(SpriteKind.ennemi1)
 ```
 
-## Étape 16
+## Étape 20
 
 Pour le bloc ``||variables:définir ennemi1||`` :
 
@@ -1886,7 +1886,7 @@ game.onUpdateInterval(5000, function () {
 })
 ```
 
-## Étape 17
+## Étape 21
 
 Pour le bloc ``||sprites:définir x||`` :
 
@@ -1924,7 +1924,7 @@ game.onUpdateInterval(5000, function () {
 })
 ```
 
-## Étape 18
+## Étape 22
 
 Pour le bloc ``||sprites:définir le type||``:
 
@@ -1964,7 +1964,7 @@ game.onUpdateInterval(5000, function () {
 })
 ```
 
-## Étape 19
+## Étape 23
 
 Glisse le bloc ``||scroller:quand bouton A est pressé||`` (onglet ``||scroller:Contrôleur||``) dans la zone de programmation.
 
@@ -1997,7 +1997,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Étape 20
+## Étape 24
 
 Continue à modifier le bloc ``||variables:définir projectile||``.
 
@@ -2030,7 +2030,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Étape 21
+## Étape 25
 
 Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||variables:définir projectile||``.
 
@@ -2062,7 +2062,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Étape 22
+## Étape 26
 
 Dupplique le bloc ``||scroller:quand bouton A est pressé||``.
 
@@ -2093,7 +2093,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Étape 23
+## Étape 27
 
 Modifie le contenu du bloc ``||scroller:quand bouton B est pressé||``.
 
@@ -2130,7 +2130,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Étape 24
+## Étape 28
 
 Glisse le bloc ``||sprites:quand||`` (onglet ``||sprites:Sprites||``) dans la zone de programmation.
 
@@ -2144,7 +2144,7 @@ namespace SpriteKind {
 })
 ```
 
-## Étape 25
+## Étape 29
 
 Ajoute le bloc ``||sprites:destroy|`` (onglet ``||sprites:Sprites||``) dans le bloc ``||sprites:quand||``.
 
@@ -2165,7 +2165,7 @@ sprites.onOverlap(SpriteKind.ennemi1, SpriteKind.Player, function (sprite, other
 })
 ```
 
-## Étape 26
+## Étape 30
 
 Ajoute le bloc ``||scene:secouer la caméra|`` (onglet ``||scene:Scène||``) sous le bloc ``||sprites:destroy||``.
 
@@ -2180,7 +2180,7 @@ sprites.onOverlap(SpriteKind.ennemi1, SpriteKind.Player, function (sprite, other
     scene.cameraShake(4, 500)
 ```
 
-## Étape 27
+## Étape 31
 
 Ajoute le bloc ``||info:modifier la vie|`` (onglet ``||info:Info||``) sous le bloc ``||scene:secouer la caméra||``.
 
@@ -2197,7 +2197,7 @@ sprites.onOverlap(SpriteKind.ennemi1, SpriteKind.Player, function (sprite, other
 })
 ```
 
-## Étape 28
+## Étape 32
 
 Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||info:modifier la vie||``.
 
@@ -2217,7 +2217,7 @@ sprites.onOverlap(SpriteKind.ennemi1, SpriteKind.Player, function (sprite, other
 })
 ```
 
-## Étape 29
+## Étape 33
 
 Dupplique le bloc ``||sprites:quand ||``.
 
@@ -2238,7 +2238,7 @@ sprites.onOverlap(SpriteKind.ennemi2, SpriteKind.Player, function (sprite, other
 })
 ```
 
-## Étape 30
+## Étape 34
 
 Dupplique le premier bloc bloc ``||sprites:quand ||``.
 
@@ -2259,7 +2259,7 @@ sprites.onOverlap(SpriteKind.ennemi3, SpriteKind.Player, function (sprite, other
 })
 ```
 
-## Étape 31
+## Étape 35
 
 Glisse le bloc ``||sprites:quand||`` (onglet ``||sprites:Sprites||``) dans la zone de programmation.
 
@@ -2275,7 +2275,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 })
 ```
 
-## Étape 32
+## Étape 36
 
 Ajoute le bloc ``||sprites:destroy|`` (onglet ``||sprites:Sprites||``) dans le bloc ``||sprites:quand||``.
 
@@ -2296,7 +2296,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 })
 ```
 
-## Étape 33
+## Étape 37
 
 Ajoute le bloc ``||info:modifier le score|`` (onglet ``||info:Info||``) sous le bloc ``||sprites:destroy||``.
 
@@ -2312,7 +2312,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 })
 ```
 
-## Étape 34
+## Étape 38
 
 Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||info:modifier la vie||``.
 
@@ -2332,7 +2332,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 
 ```
 
-## Étape 35
+## Étape 39
 
 Dupplique le premier bloc ``||sprites:quand ||``.
 
@@ -2353,7 +2353,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi2, function (sprite, o
 
 ```
 
-## Étape 36
+## Étape 40
 
 Dupplique le premier bloc ``||sprites:quand ||``.
 
