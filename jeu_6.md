@@ -1654,7 +1654,7 @@ game.onUpdateInterval(1000, function () {
     ennemi1.x = randint(5, 155)
     ennemi1.setKind(SpriteKind.ennemi1)
 ```
-## Étape 4
+## Étape 14
 
 Voici la programmation du bloc ``||game:quand||``.
 
