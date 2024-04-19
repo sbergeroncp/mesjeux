@@ -50,8 +50,6 @@ Renomme la valeur ``||variables:mySprite||`` par ``||variables:vaisseau||``.
 
 Clique sur le carré gris et dessine un vaisseau spatial qui pointe vers le haut.
 
-Regarde l'indice au besoin.
-
 ```blocks
 
 scene.setBackgroundColor(15)
