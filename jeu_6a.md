@@ -686,3 +686,175 @@ game.onUpdateInterval(5000, function () {
 })
 
 ```
+
+## Étape 21
+
+Glisse le bloc ``||scroller:quand bouton A est pressé||`` (onglet ``||scroller:Contrôleur||``) dans la zone de programmation.
+
+Ajoute le bloc ``||variables:définir projectile||`` dans le bloc ``||scroller:quand bouton A est pressé||``.
+
+Clique sur le carré gris et dessine un petit missile qui pointe vers le haut.
+
+```blocks
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    let mySprite: Sprite = null
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, mySprite, 50, 50)
+})
+
+```
+
+## Étape 22
+
+Continue à modifier le bloc ``||variables:définir projectile||``.
+
+Remplace la valeur ``||variables:mySprite||`` par ``||variables:vaisseau||``.
+
+Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:0||``.
+
+Remplace la valeur ``||sprites:50||`` de droite par ``||sprites:-150||``.
+
+```blocks
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, vaisseau, 0, -150)
+})
+```
+
+## Étape 23
+
+Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||variables:définir projectile||``.
+
+Remplace la valeur ``||music:sound ba ding|`` par ``||music:sound zapper|``.
+
+Remplace la valeur ``||music:jusqu'à la fin|`` par ``||music:in background|`` (trad. : en arrière-plan).
+
+```blocks
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, vaisseau, 0, -150)
+    music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.InBackground)
+})
+
+```
+
+## Étape 24
+
+Dupplique le bloc ``||scroller:quand bouton A est pressé||``.
+
+Remplace la valeur ``||scroller:A||`` par ``||scroller:B||``.
+
+```blocks
+
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, vaisseau, 0, -150)
+    music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.InBackground)
+})
+
+```
+
+## Étape 25
+
+Modifie le contenu du bloc ``||scroller:quand bouton B est pressé||``.
+
+Clique sur le carré gris et dessine plus gros missile qui pointe vers le haut.
+
+La valeur de ``||sprites:0||`` de gauche demeure la même.
+
+Remplace la valeur ``||sprites:-150||`` par ``||sprites:-75||``.
+
+Remplace la valeur ``||music:sound zapped||`` par ``||music:sound pew pew||``.
+
+```blocks
+
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, vaisseau, 0, -75)
+    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
+})
+
+```
