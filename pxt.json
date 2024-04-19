@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "jeu_1.md",
-        "jeu_2.md"
+        "jeu_2.md",
+        "jeu_3.md"
     ],
     "testFiles": [
         "test.ts"
