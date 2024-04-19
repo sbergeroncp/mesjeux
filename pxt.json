@@ -14,7 +14,8 @@
         "jeu_3.md",
         "jeu_4.md",
         "jeu_5.md",
-        "jeu_6.md"
+        "jeu_6.md",
+        "jeu_6a.md"
     ],
     "testFiles": [
         "test.ts"
