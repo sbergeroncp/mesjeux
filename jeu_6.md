@@ -1777,7 +1777,7 @@ Remplace la valeur ``||variable:ennemi1||`` par ``||variable:ennemi2||``.
 
 ** Attention tu dois créer une nouvelle valeur pour la prochaine étape! **
 
-Remplace la valeur ``||sprites:Player||`` par la valeur ``||sprites:ennemi2||``.
+Remplace la valeur ``||sprites:ennemi1||`` par la valeur ``||sprites:ennemi2||``.
 
 ```blocks
 
@@ -1932,7 +1932,7 @@ Remplace la valeur ``||variable:ennemi1||`` par ``||variable:ennemi3||``.
 
 ** Attention tu dois créer une nouvelle valeur pour la prochaine étape! **
 
-Remplace la valeur ``||sprites:Player||`` par la valeur ``||sprites:ennemi3||``.
+Remplace la valeur ``||sprites:ennemi1||`` par la valeur ``||sprites:ennemi3||``.
 
 ```blocks
 
