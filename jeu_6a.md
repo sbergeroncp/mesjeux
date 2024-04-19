@@ -488,7 +488,7 @@ game.onUpdateInterval(2500, function () {
 
 ## Étape 16
 
-Pour le bloc ``||sprites:définir le type||``:
+Pour le bloc ``||sprites:définir le type||`` :
 
 Remplace la valeur ``||variable:alpha||`` par ``||variable:beta||``.
 
@@ -648,7 +648,7 @@ game.onUpdateInterval(5000, function () {
 
 ## Étape 20
 
-Pour le bloc ``||sprites:définir le type||``:
+Pour le bloc ``||sprites:définir le type||`` :
 
 Remplace la valeur ``||variable:alpha||`` par ``||variable:charlie||``.
 
