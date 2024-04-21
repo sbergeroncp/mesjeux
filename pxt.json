@@ -1,6 +1,6 @@
 {
     "name": "mesjeux",
-    "version": "0.5.9",
+    "version": "0.5.10",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -14,7 +14,12 @@
         "jeu_3.md",
         "jeu_4.md",
         "jeu_5.md",
-        "jeu_6a.md"
+        "jeu_6a.md",
+        "jeu_6.md",
+        "tutoriel_6.md",
+        "images.g.jres",
+        "images.g.ts",
+        "vaisseau_1.md"
     ],
     "testFiles": [
         "test.ts"
@@ -27,5 +32,6 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "assetPack": true
 }

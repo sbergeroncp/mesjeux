@@ -1,0 +1,17 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAREREBAAAAABEAAQAgAAAQEQEAAFIAGRERERFQABARkRmRGSQkEBGRGZEZQiIAGRERERFQAAAAEBEBAABSAAAAEQAQACAAAAAREREBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "vaisseau"
+    },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAREREBAAAAABEAAQAgAAAQEQEAAFIAGRERERFQABARkRmRGSQkEBGRGZEZQiIAGRERERFQAAAAEBEBAABSAAAAEQAQACAAAAAREREBAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "vaisseau0"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
