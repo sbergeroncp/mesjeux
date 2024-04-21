@@ -16,7 +16,8 @@
         "jeu_5.md",
         "jeu_6a.md",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "vaisseau.md"
     ],
     "testFiles": [
         "test.ts"
