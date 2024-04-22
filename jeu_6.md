@@ -250,7 +250,7 @@ Ajoute le bloc ``||variables:définir projectile||`` (onglet ``||sprites:Sprites
 
 Renomme la valeur ``||variable:projectile||`` par ``||variable:alpha||``.
 
-Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
 
 Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:0||``.
 
@@ -407,7 +407,7 @@ Pour le bloc ``||variables:définir alpha||`` :
 
 Renomme la valeur ``||variable:alpha||`` par ``||variable:beta||``.
 
-Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
@@ -568,7 +568,7 @@ Pour le bloc ``||variables:définir alpha||`` :
 
 Renomme la valeur ``||variable:alpha||`` par ``||variable:charlie||``.
 
-Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
@@ -823,7 +823,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Modifie le contenu du bloc ``||scroller:quand bouton B est pressé||``.
 
-Clique sur le carré gris et dessine plus gros missile qui pointe vers le haut.
+Clique sur le carré gris et dessine un plus gros missile qui pointe vers le haut.
 
 La valeur de ``||sprites:0||`` de gauche demeure la même.
 
@@ -1060,7 +1060,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 
 ## Étape 37
 
-Duplique le premier bloc ``||sprites:quand ||``.
+Duplique le premier bloc ``||sprites:quand projectile||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi2||``.
 
@@ -1081,7 +1081,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi2, function (sprite, o
 
 ## Étape 38
 
-Duplique le premier bloc ``||sprites:quand ||``.
+Duplique le premier bloc ``||sprites:quand projectile||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi3||``.
 
