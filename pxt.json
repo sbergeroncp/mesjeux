@@ -21,7 +21,8 @@
         "_locales/fr/vaisseau.md",
         "my_asset_pack.md",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "jeu_6.md"
     ],
     "testFiles": [
         "test.ts"
