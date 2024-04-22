@@ -365,7 +365,7 @@ game.onUpdateInterval(1000, function () {
 
 ## Étape 13
 
-Dupplique le bloc ``||game:quand mise à jour du jeu chaque 1000 ms||``.
+Duplique le bloc ``||game:quand mise à jour du jeu chaque 1000 ms||``.
 
 Remplace la valeur ``||game:1000||`` par ``||game:2500||``.
 
@@ -527,7 +527,7 @@ game.onUpdateInterval(2500, function () {
 
 ## Étape 17
 
-Dupplique le bloc ``||game:quand mise àjour du jeu chaque 1000 ms||``.
+Duplique le bloc ``||game:quand mise àjour du jeu chaque 1000 ms||``.
 
 Remplace la valeur ``||game:1000||`` par ``||game:5000||``.
 
@@ -789,7 +789,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ## Étape 24
 
-Dupplique le bloc ``||scroller:quand bouton A est pressé||``.
+Duplique le bloc ``||scroller:quand bouton A est pressé||``.
 
 Remplace la valeur ``||scroller:A||`` par ``||scroller:B||``.
 
@@ -945,7 +945,7 @@ sprites.onOverlap(SpriteKind.ennemi1, SpriteKind.Player, function (sprite, other
 
 ## Étape 31
 
-Dupplique le bloc ``||sprites:quand ||``.
+Duplique le bloc ``||sprites:quand ||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi2||``.
 
@@ -966,7 +966,7 @@ sprites.onOverlap(SpriteKind.ennemi2, SpriteKind.Player, function (sprite, other
 
 ## Étape 32
 
-Dupplique le premier bloc bloc ``||sprites:quand ||``.
+Duplique le premier bloc bloc ``||sprites:quand ||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi3||``.
 
@@ -1060,7 +1060,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 
 ## Étape 37
 
-Dupplique le premier bloc ``||sprites:quand ||``.
+Duplique le premier bloc ``||sprites:quand ||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi2||``.
 
@@ -1081,7 +1081,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi2, function (sprite, o
 
 ## Étape 38
 
-Dupplique le premier bloc ``||sprites:quand ||``.
+Duplique le premier bloc ``||sprites:quand ||``.
 
 Remplace la valeur ``||sprites:ennemi1||`` par ``||sprites:ennemi3||``.
 

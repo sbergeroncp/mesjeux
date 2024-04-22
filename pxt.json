@@ -17,7 +17,9 @@
         "jeu_6a.md",
         "images.g.jres",
         "images.g.ts",
-        "vaisseau.md"
+        "test_1.md",
+        "_locales/fr/vaisseau.md",
+        "myasset.md"
     ],
     "testFiles": [
         "test.ts"
@@ -31,5 +33,10 @@
         "arcade"
     ],
     "preferredEditor": "tsprj",
-    "assetPack": true
+    "assetPack": true,
+    "yotta": {
+        "config": {
+            "PXT_GC_CHECKS": 1
+        }
+    }
 }
