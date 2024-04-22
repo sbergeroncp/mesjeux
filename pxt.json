@@ -19,7 +19,9 @@
         "images.g.ts",
         "test_1.md",
         "_locales/fr/vaisseau.md",
-        "myasset.md"
+        "my_asset_pack.md",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"

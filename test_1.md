@@ -1,4 +1,4 @@
-# test_1
+#Test
 
 ## Étape 1
 
@@ -7,28 +7,9 @@ Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||
 Choisis un lutin dans la Galerie.
 
 ```package
-vaisseau=github:sbergeroncp/vaisseau
+my_asset_pack=github:sbergeroncp/my_asset_pack
 ```
 
 ```blocks
-
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
-
-    ```
+scene.setBackgroundImage(my_asset_pack.background1)
+```
