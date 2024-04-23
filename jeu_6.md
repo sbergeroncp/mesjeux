@@ -1042,7 +1042,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.ennemi1, function (sprite, o
 
 Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||info:modifier la vie||``.
 
-Remplace la valeur ``||music:sound ba ding|`` par ``||music:sound sound big crash|``.
+Remplace la valeur ``||music:sound ba ding|`` par ``||music:sound big crash|``.
 
 Remplace la valeur ``||music:jusqu'à la fin|`` par ``||music:in background|`` (trad. : en arrière-plan).
 

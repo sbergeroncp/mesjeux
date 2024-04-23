@@ -612,7 +612,7 @@ game.onUpdateInterval(2000, function () {
 
 ## Étape 11
 
-Ajoute le bloc ``||animation:animer mySprite||`` (onglet ``||animation:Animation||`` dans Avancé) sous le bloc ``||sprites:rester à l'écran||``.
+Ajoute le bloc ``||animation:animer mySprite||`` (onglet ``||animation:Animation||`` dans Avancé) sous le bloc ``||variables:définir mySprite2||``.
 
 Sélectionne les valeurs ci-dessous :
 
@@ -722,7 +722,7 @@ Modifie la valeur ``||variables:mySprite||`` pour ``||variables:mySprite2||``.
 
 Remplace la valeur ``||Sprites:50||`` de gauche par ``||Sprites:-75||``.
 
-Remplace la valeur ``||Sprites:50||`` de gauche par ``||Sprites:0||``.
+Remplace la valeur ``||Sprites:50||`` de droite par ``||Sprites:0||``.
 
 ```blocks
 
@@ -1020,7 +1020,7 @@ game.onUpdateInterval(2000, function () {
 
 ## Étape 14
 
-Ajoute le bloc ``||sprites:définir destruction automatique||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||sprites:définir la position||``.
+Ajoute le bloc ``||sprites:destruction automatique||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||sprites:définir la position||``.
 
 Modifie la valeur ``||variables:mySprite||`` pour ``||variables:mySprite2||``.
 

@@ -448,7 +448,7 @@ Remplace la valeur ``||sprites:Player||`` de droite par ``||sprites:Projectile||
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
 	
 })
 
@@ -458,7 +458,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
 
 Ajoute le bloc ``||sprites:destroy||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||sprites:quand||``.
 
-Remplace la valeur ``||variables:mySprite||`` par ``||variables:otherSprite||``. Glisse celle du bloc ``||sprites:quand||``.
+Glisse le bloc ``||variables:otherSprite||`` dans le bloc ``||variables:mySprite||`` pour remplacer la valeur.
 
 Appuie sur le bouton ``||sprites:+||`` pour afficher plus d'options.
 
