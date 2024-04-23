@@ -185,7 +185,7 @@ Glisse le bloc ``||Sprites:définir la vitesse||`` (onglet ``||Sprites:Sprites||
 
 Remplace la valeur ``||variables:mySprite||`` par la valeur ``||variables:mySprite2||``.
 
-Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:200||``.
+Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:100||``.
 
 Remplace la valeur ``||sprites:50||`` de droite par ``||sprites:100||``.
 
@@ -244,7 +244,7 @@ let mySprite2 = sprites.create(img`
     . . c c c c . . . . c c c c . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Food)
-mySprite.setVelocity(200, 100)
+mySprite.setVelocity(100, 100)
 
 ```
 
@@ -254,106 +254,134 @@ Ajoute le bloc ``||sprites:rebondir sur le mur||`` sous le bloc ``||sprites:déf
 
 Remplace la valeur ``||variables:mySprite||`` par la valeur ``||variables:mySprite2||``.
 
-Assure-toi que le bloc soit activé.
+Assure-toi que le bloc soit ``||loops:activé||``.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-
-})
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
+    ..........666666666666..........
+    ........6667777777777666........
+    ......66677777777777777666......
+    .....6677777779999777777766.....
+    ....667777779966669977777766....
+    ....677777799668866117777776....
+    ...66777779966877861197777766...
+    ...66777799668677686699777766...
+    ...88777796688888888669777788...
+    ...88777788888888888888777788...
+    ...88977888679999997688877988...
+    ...88977886777777777768877988...
+    ...88997777777777777777779988...
+    ...88799777777777777777711788...
+    ...88679997777777777779117688...
+    ..cc866679999999999999976668cc..
+    .ccbc6666679999999999766666cbcc.
+    .fcbcc66666666666666666666ccbcf.
+    .fcbbcc666666666666666666ccbdcf.
+    .f8bbbccc66666666666666cccbddcf.
+    .f8cbbbbccccccccccccccccbdddbcf.
+    .f8ccbbbbbccccccccccccb111ddccf.
+    .f6ccccbbbddddddddddddd111dcccf.
+    .f6ccccccbbddddddddddddddbbcccf.
+    .f6cccccccccccccbbbbbbbbbdbcccf.
+    ..f6cccccccccbbbbbbbbbbbddbccf..
+    ..f6cccccccccbbbbbbbbbbbddbccf..
+    ..ff6ccccccccbbbbbbbbbbbddbcff..
+    ...ff6cccccccbbbbbbbbbbbddbff...
+    ....ffcccccccbbbbbbbbbbbdbff....
+    ......ffccccbbbbbbbbbbbbff......
+    ........ffffffffffffffff........
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
+mySprite.setPosition(80, 60)
 let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
+    . . . . . . . b b . . . . . . . 
+    . . . . . . b d d b . . . . . . 
+    . . . . . b d 5 5 d b . . . . . 
+    . . . . b b 5 5 5 5 b b . . . . 
+    . . . . b 5 5 5 5 5 5 b . . . . 
+    b b b b b 5 5 5 5 1 1 d b b b b 
+    b 5 5 5 5 5 5 5 5 1 1 1 5 5 5 b 
+    b d d 5 5 5 5 5 5 1 1 1 5 d d b 
+    . b d d 5 5 5 5 5 5 5 5 d d b . 
+    . . b b 5 5 5 5 5 5 5 5 b b . . 
+    . . c b 5 5 5 5 5 5 5 5 b c . . 
+    . . c 5 5 5 5 d d 5 5 5 5 c . . 
+    . . c 5 5 d b b b b d 5 5 c . . 
+    . . c 5 d b c c c c b d 5 c . . 
+    . . c c c c . . . . c c c c . . 
+    . . . . . . . . . . . . . . . . 
     `, SpriteKind.Food)
+mySprite2.setVelocity(100, 100)
+mySprite2.setBounceOnWall(true)
     
 ```
 
 ## Étape 7
 
-Ajoute le bloc ``||Sprites:définir la position||`` (onglet ``||Sprites:Sprites)||`` sous le bloc ``||info:modifier le score||``.
+Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info)||`` sous le bloc ``||sprites:rebondit sur le mur||``.
 
-Remplace la valeur ``||variables:mySprite||`` par ``||variables:mySprite2||``.
+La valeur ``||info:10)||`` demeure la même.
 
 ```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(0, 0)
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
+    ..........666666666666..........
+    ........6667777777777666........
+    ......66677777777777777666......
+    .....6677777779999777777766.....
+    ....667777779966669977777766....
+    ....677777799668866117777776....
+    ...66777779966877861197777766...
+    ...66777799668677686699777766...
+    ...88777796688888888669777788...
+    ...88777788888888888888777788...
+    ...88977888679999997688877988...
+    ...88977886777777777768877988...
+    ...88997777777777777777779988...
+    ...88799777777777777777711788...
+    ...88679997777777777779117688...
+    ..cc866679999999999999976668cc..
+    .ccbc6666679999999999766666cbcc.
+    .fcbcc66666666666666666666ccbcf.
+    .fcbbcc666666666666666666ccbdcf.
+    .f8bbbccc66666666666666cccbddcf.
+    .f8cbbbbccccccccccccccccbdddbcf.
+    .f8ccbbbbbccccccccccccb111ddccf.
+    .f6ccccbbbddddddddddddd111dcccf.
+    .f6ccccccbbddddddddddddddbbcccf.
+    .f6cccccccccccccbbbbbbbbbdbcccf.
+    ..f6cccccccccbbbbbbbbbbbddbccf..
+    ..f6cccccccccbbbbbbbbbbbddbccf..
+    ..ff6ccccccccbbbbbbbbbbbddbcff..
+    ...ff6cccccccbbbbbbbbbbbddbff...
+    ....ffcccccccbbbbbbbbbbbdbff....
+    ......ffccccbbbbbbbbbbbbff......
+    ........ffffffffffffffff........
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
+mySprite.setPosition(80, 60)
+let mySprite2 = sprites.create(img`
+    . . . . . . . b b . . . . . . . 
+    . . . . . . b d d b . . . . . . 
+    . . . . . b d 5 5 d b . . . . . 
+    . . . . b b 5 5 5 5 b b . . . . 
+    . . . . b 5 5 5 5 5 5 b . . . . 
+    b b b b b 5 5 5 5 1 1 d b b b b 
+    b 5 5 5 5 5 5 5 5 1 1 1 5 5 5 b 
+    b d d 5 5 5 5 5 5 1 1 1 5 d d b 
+    . b d d 5 5 5 5 5 5 5 5 d d b . 
+    . . b b 5 5 5 5 5 5 5 5 b b . . 
+    . . c b 5 5 5 5 5 5 5 5 b c . . 
+    . . c 5 5 5 5 d d 5 5 5 5 c . . 
+    . . c 5 5 d b b b b d 5 5 c . . 
+    . . c 5 d b c c c c b d 5 c . . 
+    . . c c c c . . . . c c c c . . 
+    . . . . . . . . . . . . . . . . 
     `, SpriteKind.Food)
+mySprite2.setVelocity(100, 100)
+mySprite2.setBounceOnWall(true)
+info.startCountdown(10)
+
     
 ```
 

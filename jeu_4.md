@@ -579,95 +579,7 @@ Remplace la valeur ``||variables:mySprite||`` du deuxième bloc par ``||variable
 
 Remplace la valeur ``||variables:mySprite||`` du troisième bloc par ``||variables:projectile2||``.
 
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.ashes, 100)
-    music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
-    info.changeScoreBy(1)
-})
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    sprites.destroy(otherSprite, effects.trail, 100)
-    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
-    info.changeLifeBy(-1)
-})
-let projectile2: Sprite = null
-let projectile: Sprite = null
-scene.setBackgroundColor(8)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . c c c c . . . . 
-    . . . . . . c c d d d d c . . . 
-    . . . . . c c c c c c d c . . . 
-    . . . . c c 4 4 4 4 d c c . . . 
-    . . . c 4 d 4 4 4 4 4 1 c . c c 
-    . . c 4 4 4 1 4 4 4 4 d 1 c 4 c 
-    . c 4 4 4 4 1 4 4 4 4 4 1 c 4 c 
-    f 4 4 4 4 4 1 4 4 4 4 4 1 4 4 f 
-    f 4 4 4 f 4 1 c c 4 4 4 1 f 4 f 
-    f 4 4 4 4 4 1 4 4 f 4 4 d f 4 f 
-    . f 4 4 4 4 1 c 4 f 4 d f f f f 
-    . . f f 4 d 4 4 f f 4 c f c . . 
-    . . . . f f 4 4 4 4 c d b c . . 
-    . . . . . . f f f f d d d c . . 
-    . . . . . . . . . . c c c . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-info.setScore(0)
-game.onUpdateInterval(5000, function () {
-    projectile = sprites.createProjectileFromSide(img`
-        . . . . . . . . . . . 6 6 6 6 6 
-        . . . . . . . . . 6 6 7 7 7 7 8 
-        . . . . . . 8 8 8 7 7 8 8 6 8 8 
-        . . e e e e c 6 6 8 8 . 8 7 8 . 
-        . e 2 5 4 2 e c 8 . . . 6 7 8 . 
-        e 2 4 2 2 2 2 2 c . . . 6 7 8 . 
-        e 2 2 2 2 2 2 2 c . . . 8 6 8 . 
-        e 2 e e 2 2 2 2 e e e e c 6 8 . 
-        c 2 e e 2 2 2 2 e 2 5 4 2 c 8 . 
-        . c 2 e e e 2 e 2 4 2 2 2 2 c . 
-        . . c 2 2 2 e e 2 2 2 2 2 2 2 e 
-        . . . e c c e c 2 2 2 2 2 2 2 e 
-        . . . . . . . c 2 e e 2 2 e 2 c 
-        . . . . . . . c e e e e e e 2 c 
-        . . . . . . . . c e 2 2 2 2 c . 
-        . . . . . . . . . c c c c c . . 
-        `, randint(-50, 50), randint(-50, 50))
-    projectile2 = sprites.createProjectileFromSide(img`
-        .............ccfff..............
-        ...........ccddbcf..............
-        ..........ccddbbf...............
-        ..........fccbbcf...............
-        .....fffffccccccff.........ccc..
-        ...ffbbbbbbbcbbbbcfff....ccbbc..
-        ..fbbbbbbbbcbcbbbbcccff.cdbbc...
-        ffbbbbbbffbbcbcbbbcccccfcdbbf...
-        fbcbbb11ff1bcbbbbbcccccffbbf....
-        fbbb11111111bbbbbcccccccbbcf....
-        .fb11133cc11bbbbcccccccccccf....
-        ..fccc31c111bbbcccccbdbffbbcf...
-        ...fc13c111cbbbfcddddcc..fbbf...
-        ....fccc111fbdbbccdcc.....fbbf..
-        ........ccccfcdbbcc........fff..
-        .............fffff..............
-        `, randint(-50, 50), randint(-50, 50))
-    projectile2.setKind(SpriteKind.Enemy)
-})
-forever(function () {
-    mySprite.setStayInScreen(true)
-    projectile.setStayInScreen(true)
-    projectile2.setStayInScreen(true)
-})
-
-```
-
-## Étape 21
-
-Ajoute trois blocs ``||sprites:rebondir sur mur||`` (onglet ``||sprites:Sprites||``) sous le bloc ``||sprites:rester à lécran||``.
-
-Remplace la valeur ``||variables:mySprite||`` du deuxième bloc par ``||variables:projectile||``.
-
-Remplace la valeur ``||variables:mySprite||`` du troisième bloc par ``||variables:projectile2||``.
+Assure-toi que les trois blocs soient ``||loops:activés||``.
 
 ```blocks
 
@@ -744,13 +656,10 @@ game.onUpdateInterval(5000, function () {
     projectile2.setKind(SpriteKind.Enemy)
 })
 forever(function () {
-    mySprite.setStayInScreen(true)
-    projectile.setStayInScreen(true)
-    projectile2.setStayInScreen(true)
     mySprite.setBounceOnWall(true)
     projectile.setBounceOnWall(true)
     projectile2.setBounceOnWall(true)
 })
 
-
 ```
+
