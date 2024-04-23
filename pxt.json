@@ -22,7 +22,8 @@
         "my_asset_pack.md",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "jeu_6.md"
+        "jeu_6.md",
+        "jeu_2a.md"
     ],
     "testFiles": [
         "test.ts"
