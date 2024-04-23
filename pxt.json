@@ -22,7 +22,8 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "jeu_6.md",
-        "jeu_2a.md"
+        "jeu_2a.md",
+        "jeu_3a.md"
     ],
     "testFiles": [
         "test.ts"

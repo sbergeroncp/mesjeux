@@ -573,7 +573,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 
 Glisse le bloc ``||loops:toujours||`` (onglet ``||loops:Boucles||``) dans la zone de programmation.
 
-Ajoute trois blocs ``||sprites:rester à lécran||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||loops:toujours||``.
+Ajoute trois blocs ``||sprites:rebondir à lécran||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||loops:toujours||``.
 
 Remplace la valeur ``||variables:mySprite||`` du deuxième bloc par ``||variables:projectile||``.
 
