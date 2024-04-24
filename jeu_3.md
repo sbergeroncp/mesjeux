@@ -243,7 +243,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.changeScoreBy(1)
 
 })
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -297,7 +297,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     mySprite2.setPosition(0, 0)
 })
 let mySprite2: Sprite = null
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -349,7 +349,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     mySprite2.setPosition(randint(0, 10), randint(0, 10))
 })
 let mySprite2: Sprite = null
-scene.setBackgroundColor(0)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
