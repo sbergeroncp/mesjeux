@@ -114,7 +114,7 @@ mySprite.setPosition(80, 60)
 
 Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||sprites:définir la position||``.
 
-Assure-toi que la valeur ``||variables:définir mySprite2||`` est sélectionnée.
+Assure-toi que la valeur ``||variables:définir mySprite2||`` soit sélectionnée.
 
 Remplace la valeur ``||Sprites:Player||`` par ``||Sprites:Food||``.
 
@@ -482,7 +482,7 @@ Remplace la valeur ``||info:100||`` du bloc ``||info:on score||`` par ``||info:5
 
 ```blocks
 
-info.onScore(3, function () {
+info.onScore(5, function () {
     game.gameOver(true)
 })
 
