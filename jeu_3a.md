@@ -319,13 +319,18 @@ mySprite2.setBounceOnWall(true)
 
 ## Étape 7
 
-Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info)||`` sous le bloc ``||sprites:rebondit sur le mur||``.
+Ajoute les blocs ``||info:démarrer le compte à rebours||`` et ``||info:définir le score||`` (onglet ``||info:Info)||`` sous le bloc ``||sprites:rebondit sur le mur||``.
 
-La valeur ``||info:10)||`` demeure la même.
+La valeur ``||info:10||`` du bloc ``||info:démarrer le compte à rebours||`` demeure la même.
+
+La valeur ``||info:0||`` du bloc ``||info:définir le score||`` demeure la même.
 
 ```blocks
+
+let mySprite2: Sprite = null
+let mySprite: Sprite = null
 scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     ..........666666666666..........
     ........6667777777777666........
     ......66677777777777777666......
@@ -360,7 +365,7 @@ let mySprite = sprites.create(img`
     ........ffffffffffffffff........
     `, SpriteKind.Player)
 mySprite.setPosition(80, 60)
-let mySprite2 = sprites.create(img`
+mySprite2 = sprites.create(img`
     . . . . . . . b b . . . . . . . 
     . . . . . . b d d b . . . . . . 
     . . . . . b d 5 5 d b . . . . . 
@@ -381,230 +386,104 @@ let mySprite2 = sprites.create(img`
 mySprite2.setVelocity(100, 100)
 mySprite2.setBounceOnWall(true)
 info.startCountdown(10)
-
+info.setScore(0)
     
 ```
 
 ## Étape 8
 
-Remplace les valeurs ``||Sprites:0||`` du bloc ``||Sprites:définir la position||`` par les blocs ``||math:choisir aléatoirement entre||`` (onglet ``||math:Maths||``).
+Glisse le bloc ``||controller:quand le bouton A est appuyé||`` (onglet ``||controller:Contrôleur||``) dans la zone de programmation.
+
+Ajoute le bloc ``||logic:si alors sinon||`` (onglet ``||logic:Logique||``) dans le bloc ``||controller:quand le bouton A est appuyé||``.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, 10), randint(0, 10))
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
 })
-let mySprite2: Sprite = null
-scene.setBackgroundColor(0)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
     
-
 ```
 
 ## Étape 9
 
-Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:x||``.
+Modifie le bloc ``||logic:si alors sinon||``.
 
-Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:largeur de l'écran||``.
+Remplace la valeur ``||logic:vrai||`` du bloc ``||logic:si alors sinon||`` par le bloc ``||sprites:chevauche avec||`` (onglet ``||sprites:Sprites||``).
 
-Regarde bien l'indice !
+Remplace la valeur ``||variables:otherSprite||`` par ``||variables:mySprite2||``.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, 10))
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (mySprite.overlapsWith(mySprite2)) {
+    } else {
+    	
+    }
 })
 let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
-
+let mySprite: Sprite = null
+    
 ```
 
 ## Étape 10
 
-Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:y||``.
+Ajoute les blocs ``||info:modifier le score||`` et ``||info:change countdown by||`` (onglet ``||info:Info)||`` dans le bloc ``||logic:si alors||``.
 
-Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:hauteur de l'écran||``.
+La valeur ``||info:1||`` du bloc ``||info:modifier le score||`` demeure la même.
 
-Regarde bien l'indice.
+Remplace la valeur ``||info:0||`` du bloc ``||info:change countdown by||`` par ``||info:2||``.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (mySprite.overlapsWith(mySprite2)) {
+        info.changeScoreBy(1)
+        info.changeCountdownBy(2)
+    } else {
+    	
+    }
 })
 let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
-
+let mySprite: Sprite = null
 ```
 
 ## Étape 11
 
-Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info||``) sous le bloc ``||Sprites:définir la position||``.
+Ajoute le bloc ``||info:modifier la vie||`` (onglet ``||info:Info)||`` dans le bloc ``||logic:sinon||``.
 
-Remplace la valeur ``||info:10||`` par ``||info:3||``.
+La valeur ``||info:-1||`` du bloc ``||info:modifier la vie||`` demeure la même.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
-    info.startCountdown(3)
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (mySprite.overlapsWith(mySprite2)) {
+        info.changeScoreBy(1)
+        info.changeCountdownBy(2)
+    } else {
+        info.changeLifeBy(-1)
+    }
 })
 let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
+let mySprite: Sprite = null
 
 ```
 
+## Étape 12
+
+Glisse le bloc ``||info:on score||`` (onglet ``||info:Info)||`` dans la zone de programmation.
+
+Ajoute le bloc ``||game:game over||`` (onglet ``||game:Jeu)||`` dans le bloc ``||info:on score||``.
+
+Remplace la valeur ``||info:100||`` du bloc ``||info:on score||`` par ``||info:5||``.
+
+```blocks
+
+info.onScore(3, function () {
+    game.gameOver(true)
+})
+
+```
