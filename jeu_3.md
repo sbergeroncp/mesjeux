@@ -12,7 +12,7 @@ Choisis une couleur.
 
 ```blocks
 
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 
 
 ```
@@ -25,7 +25,7 @@ Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
 
 ```blocks
 
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -53,7 +53,7 @@ Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:
 
 ```blocks
 
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -80,7 +80,7 @@ controller.moveSprite(mySprite)
 
 Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scroller:déplacer avec les boutons||``.
 
-Assure-toi que la valeur ``||variables:définir mySprite2||`` est sélectionnée.
+Assure-toi que la valeur ``||variables:définir mySprite2||`` soit sélectionnée.
 
 Remplace la valeur ``||Sprites:Player||`` par ``||Sprites:Food||``.
 
@@ -88,7 +88,7 @@ Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
 
 ```blocks
 
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -131,6 +131,56 @@ let mySprite2 = sprites.create(img`
 
 ## Étape 5
 
+Ajoute le bloc ``||info:définir le score||`` (onglet ``||info:Info||``) sous le bloc ``||variables:définir mySprite2||``.
+
+La valeur ``||info:0||`` demeure la même.
+
+```blocks
+
+scene.setBackgroundColor(1)
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . b 5 5 b . . . 
+    . . . . . . b b b b b b . . . . 
+    . . . . . b b 5 5 5 5 5 b . . . 
+    . b b b b b 5 5 5 5 5 5 5 b . . 
+    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
+    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
+    . . b d 5 5 b 1 f f 5 4 4 c . . 
+    b b d b 5 5 5 d f b 4 4 4 4 b . 
+    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
+    c d d d c c b 5 5 5 5 5 5 5 b . 
+    c b d d d d d 5 5 5 5 5 5 5 b . 
+    . c d d d d d d 5 5 5 5 5 d b . 
+    . . c b d d d d d 5 5 5 b b . . 
+    . . . c c c c c c c c b b . . . 
+    `, SpriteKind.Player)
+controller.moveSprite(mySprite)
+let mySprite2 = sprites.create(img`
+    . . . . . . . 6 . . . . . . . . 
+    . . . . . . 8 6 6 . . . 6 8 . . 
+    . . . e e e 8 8 6 6 . 6 7 8 . . 
+    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
+    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
+    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
+    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
+    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
+    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
+    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
+    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
+    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
+    e e 2 e 2 2 4 2 2 e e e c . . . 
+    e e e e 2 e 2 2 e e e c . . . . 
+    e e e 2 e e c e c c c . . . . . 
+    . c c c c c c c . . . . . . . . 
+    `, SpriteKind.Food)
+info.setScore(0)
+
+```
+
+## Étape 6
+
 Glisse le bloc ``||Sprites:quand||`` (onglet ``||Sprites:Sprites||``) dans la zone de programmation.
 
 Remplace la valeur ``||Sprites:Player||`` de droite par la valeur ``||Sprites:Food||``.
@@ -140,7 +190,7 @@ Remplace la valeur ``||Sprites:Player||`` de droite par la valeur ``||Sprites:Fo
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
 	
 })
-scene.setBackgroundColor(9)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -181,7 +231,7 @@ let mySprite2 = sprites.create(img`
     
 ```
 
-## Étape 6
+## Étape 7
 
 Ajoute le bloc ``||info:modifier le score||`` dans le bloc ``||Sprites:quand||``.
 
@@ -189,7 +239,7 @@ La valeur ``||info:1||`` du bloc ``||info:modifier le score||`` demeure la même
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     info.changeScoreBy(1)
 
 })
@@ -234,7 +284,7 @@ let mySprite2 = sprites.create(img`
     
 ```
 
-## Étape 7
+## Étape 8
 
 Ajoute le bloc ``||Sprites:définir la position||`` (onglet ``||Sprites:Sprites)||`` sous le bloc ``||info:modifier le score||``.
 
@@ -288,7 +338,7 @@ mySprite2 = sprites.create(img`
     
 ```
 
-## Étape 8
+## Étape 9
 
 Remplace les valeurs ``||Sprites:0||`` du bloc ``||Sprites:définir la position||`` par les blocs ``||math:choisir aléatoirement entre||`` (onglet ``||math:Maths||``).
 
@@ -341,7 +391,7 @@ mySprite2 = sprites.create(img`
 
 ```
 
-## Étape 9
+## Étape 10
 
 Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:x||``.
 
@@ -398,7 +448,7 @@ mySprite2 = sprites.create(img`
 
 ```
 
-## Étape 10
+## Étape 11
 
 Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:y||``.
 
@@ -455,7 +505,7 @@ mySprite2 = sprites.create(img`
 
 ```
 
-## Étape 11
+## Étape 12
 
 Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info||``) sous le bloc ``||Sprites:définir la position||``.
 
@@ -510,4 +560,3 @@ mySprite2 = sprites.create(img`
 
 
 ```
-
