@@ -290,7 +290,7 @@ let mySprite = sprites.create(img`
 
 ## Étape 3
 
-Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:Contrôleur||``) sous le bloc ``||Sprites:définir mySprite||``.
+Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:Contrôleur||``) sous le bloc ``||variables:définir mySprite||``.
 
 Appuie sur le bouton ``||scroller:+||`` pour afficher plus d'options.
 
@@ -460,6 +460,8 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Ajoute le bloc ``||animation:animer mySprite||`` (onglet ``||animation:Animation||`` dans Avancé) dans le bloc ``||scroller:quand bouton gauche est appuyé ||``.
 
+Regarde l'indice.
+
 Sélectionne les valeurs ci-dessous :
 
 ► ``||animation:animer||`` : ``||variables:mySprite||``
@@ -568,6 +570,8 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 ## Étape 7
 
 Ajoute le bloc ``||animation:animer mySprite||`` (onglet ``||animation:Animation||`` dans Avancé) dans le bloc ``||scroller:quand bouton droite est appuyé ||``.
+
+Regarde l'indice.
 
 Sélectionne les valeurs ci-dessous :
 

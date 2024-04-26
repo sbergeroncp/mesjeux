@@ -12,7 +12,7 @@ Choisis une couleur.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundColor(1)
 
 ```
 
@@ -24,7 +24,7 @@ Choisis un lutin dans la Galerie.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . f f f . . . . . . . . f f f 
     . f f c c . . . . . . f c b b c 
@@ -52,7 +52,7 @@ Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . f f f . . . . . . . . f f f 
     . f f c c . . . . . . f c b b c 
@@ -77,7 +77,7 @@ controller.moveSprite(mySprite)
 
 ## Étape 4
 
-Ajoute le bloc ``||animation:animer mySprite||`` (onglet ``||animation:Animation||`` dans Avancé) sous le bloc ``||scroller:déplacer avec les boutons||``.
+Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||`` dans Avancé) sous le bloc ``||scroller:déplacer avec les boutons||``.
 
 Sélectionne les valeurs ci-dessous :
 
@@ -85,13 +85,13 @@ Sélectionne les valeurs ci-dessous :
 
 ► ``||animation:trames||`` : appuie sur le carré vide pour ajouter une ressource et sélectionne l'animation correspondant à ton lutin dans l'onglet Galerie
 
-► ``||animation:intervalle (ms)||`` : 500 
+► ``||animation:intervalle (ms)||`` : 200 
 
 ► ``||animation:en boucle||`` : activé
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundColor(1)
 let mySprite = sprites.create(img`
     . . f f f . . . . . . . . f f f 
     . f f c c . . . . . . f c b b c 
@@ -114,75 +114,75 @@ controller.moveSprite(mySprite)
 animation.runImageAnimation(
 mySprite,
 [img`
-    f f f . . . . . . . . f f f . . 
-    c b b c f . . . . . . c c f f . 
-    . c b b c f . . . . . . c c f f 
-    . c c c b f . . . . . . c f c f 
-    . c c b b c f . c c . c c f f f 
-    . c b b c b f c c 3 c c 3 c f f 
-    . c b c c b f c b 3 c b 3 b f f 
-    . . c c c b b c b 1 b b b 1 c . 
-    . . . c c c c b b 1 b b b 1 c . 
-    . . . . c c b b b b b b b b b c 
-    . . . . f b b b b c 1 f f 1 b c 
-    . . . c f b b b b f 1 f f 1 f f 
-    . . c c f b b b b f 2 2 2 2 f f 
-    . . . . f c b b b b 2 2 2 2 f . 
-    . . . . . f c b b b b b b f . . 
-    . . . . . . f f f f f f f . . . 
+    . . f f f . . . . . . . . f f f 
+    . f f c c . . . . . . f c b b c 
+    f f c c . . . . . . f c b b c . 
+    f c f c . . . . . . f b c c c . 
+    f f f c c . c c . f c b b c c . 
+    f f c 3 c c 3 c c f b c b b c . 
+    f f b 3 b c 3 b c f b c c b c . 
+    . c 1 b b b 1 b c b b c c c . . 
+    . c 1 b b b 1 b b c c c c . . . 
+    c b b b b b b b b b c c . . . . 
+    c b 1 f f 1 c b b b b f . . . . 
+    f f 1 f f 1 f b b b b f c . . . 
+    f f 2 2 2 2 f b b b b f c c . . 
+    . f 2 2 2 2 b b b b c f . . . . 
+    . . f b b b b b b c f . . . . . 
+    . . . f f f f f f f . . . . . . 
     `,img`
-    . . . . . . . . . . . f f f . . 
-    f f f . . . . . . . . c c f f f 
-    c b b c f . . . c c . c c c f f 
-    . c b b b f f c c 3 c c 3 c f f 
-    . c c c b b f c b 3 c b 3 c f f 
-    . c c b c b f c b b b b b b c f 
-    . c b b c b b c b 1 b b b 1 c c 
-    . c b c c c b b b b b b b b b c 
-    . . c c c c c b b c 1 f f 1 b c 
-    . . . c f b b b b f 1 f f 1 f c 
-    . . . c f b b b b f f f f f f f 
-    . . c c f b b b b f 2 2 2 2 f f 
-    . . . . f c b b b 2 2 2 2 2 f . 
-    . . . . . f c b b b 2 2 2 f . . 
-    . . . . . . f f f f f f f . . . 
+    . . f f f . . . . . . . . . . . 
+    f f f c c . . . . . . . . f f f 
+    f f c c c . c c . . . f c b b c 
+    f f c 3 c c 3 c c f f b b b c . 
+    f f c 3 b c 3 b c f b b c c c . 
+    f c b b b b b b c f b c b c c . 
+    c c 1 b b b 1 b c b b c b b c . 
+    c b b b b b b b b b c c c b c . 
+    c b 1 f f 1 c b b c c c c c . . 
+    c f 1 f f 1 f b b b b f c . . . 
+    f f f f f f f b b b b f c . . . 
+    f f 2 2 2 2 f b b b b f c c . . 
+    . f 2 2 2 2 2 b b b c f . . . . 
+    . . f 2 2 2 b b b c f . . . . . 
+    . . . f f f f f f f . . . . . . 
     . . . . . . . . . . . . . . . . 
     `,img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . . . c c . c c . . . 
-    . . . . . . c c c 3 c c 3 f . . 
-    . . . . . c c c b 3 c b 3 c f . 
-    . . . . f f b b b b b b b b c f 
-    . . . . f f b b b 1 b b b 1 c c 
-    . . . f f f c b b b b b b b b c 
-    . . . f f f f b b c 1 f f 1 b c 
-    . . . b b b c c b f 1 f f 1 f f 
-    . . . c c c c f b f f f f f f f 
-    . . c c c b b f b f 2 2 2 2 f f 
-    . . . c b b c c b 2 2 2 2 2 f . 
-    . . c b b c c f f b 2 2 2 f . . 
-    . c c c c c f f f f f f f . . . 
-    c c c c . . . . . . . . . . . . 
+    . . . c c . c c . . . . . . . . 
+    . . f 3 c c 3 c c c . . . . . . 
+    . f c 3 b c 3 b c c c . . . . . 
+    f c b b b b b b b b f f . . . . 
+    c c 1 b b b 1 b b b f f . . . . 
+    c b b b b b b b b c f f f . . . 
+    c b 1 f f 1 c b b f f f f . . . 
+    f f 1 f f 1 f b c c b b b . . . 
+    f f f f f f f b f c c c c . . . 
+    f f 2 2 2 2 f b f b b c c c . . 
+    . f 2 2 2 2 2 b c c b b c . . . 
+    . . f 2 2 2 b f f c c b b c . . 
+    . . . f f f f f f f c c c c c . 
+    . . . . . . . . . . . . c c c c 
     `,img`
     . f f f . . . . . . . . f f f . 
-    . c b b c f . . . . . . . c f f 
-    . . c b b c f . . . . . . c c f 
-    . . c c c b f . . . . . . . f c 
-    . . c c b b f f . . . . . f f c 
-    . . c b b c b f c c . c c f f f 
-    . . c b c c b f c c c c c f f f 
-    . . . c c c b c b 3 c c 3 c f . 
-    . . . c c c c b b 3 c b 3 b c . 
-    . . . . c c b b b b b b b b c c 
-    . . . c f b b b 1 1 b b b 1 1 c 
-    . . c c f b b b b b b b b b b f 
-    . . . . f b b b b c b b b c b f 
-    . . . . f c b b b 1 f f f 1 f . 
-    . . . . . f c b b b b b b f . . 
-    . . . . . . f f f f f f f . . . 
+    f f c . . . . . . . f c b b c . 
+    f c c . . . . . . f c b b c . . 
+    c f . . . . . . . f b c c c . . 
+    c f f . . . . . f f b b c c . . 
+    f f f c c . c c f b c b b c . . 
+    f f f c c c c c f b c c b c . . 
+    . f c 3 c c 3 b c b c c c . . . 
+    . c b 3 b c 3 b b c c c c . . . 
+    c c b b b b b b b b c c . . . . 
+    c 1 1 b b b 1 1 b b b f c . . . 
+    f b b b b b b b b b b f c c . . 
+    f b c b b b c b b b b f . . . . 
+    . f 1 f f f 1 b b b c f . . . . 
+    . . f b b b b b b c f . . . . . 
+    . . . f f f f f f f . . . . . . 
     `],
-500,
+200,
 true
 )
 
