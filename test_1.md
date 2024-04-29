@@ -12,7 +12,7 @@ Dessine un vaisseau qui pointe vers le haut.
 
 ```blocks
 scene.setBackgroundImage(tutorial_asset_exemple.background_1)
-let mySprite = sprites.create(tutorial_asset_exemple.background_1, SpriteKind.Player)
+let mySprite = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 ```
 
 ```package
