@@ -1,15 +1,20 @@
-#Test
+# Tutoriel 2
+
+## @showdialog
+
+Programme un lutin pour qu'il se déplace sur l'écran.
 
 ## Étape 1
 
-Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir la couleur d'arrière-plan||``.
+Glisse le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) dans la zone de programmation.
 
-Choisis un lutin dans la Galerie.
-
-```package
-my_asset_pack=github:sbergeroncp/my_asset_pack
-```
+Dessine un vaisseau qui pointe vers le haut.
 
 ```blocks
-scene.setBackgroundImage(my_asset_pack.background1)
+scene.setBackgroundImage(tutorial_asset_exemple.background_1)
+let mySprite = sprites.create(tutorial_asset_exemple.background_1, SpriteKind.Player)
+```
+
+```package
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```

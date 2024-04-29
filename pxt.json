@@ -16,13 +16,12 @@
         "jeu_5.md",
         "images.g.jres",
         "images.g.ts",
-        "_locales/fr/vaisseau.md",
-        "my_asset_pack.md",
         "tilemap.g.jres",
         "tilemap.g.ts",
         "jeu_6.md",
         "jeu_2a.md",
-        "jeu_3a.md"
+        "jeu_3a.md",
+        "test_1.md"
     ],
     "testFiles": [
         "test.ts"
