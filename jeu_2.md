@@ -20,7 +20,7 @@ scene.setBackgroundColor(1)
 
 Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir la couleur d'arrière-plan||``.
 
-Choisis un lutin dans la Galerie.
+Choisis le même lutin que dans l'indice.
 
 ```blocks
 

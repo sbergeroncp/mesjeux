@@ -1,9 +1,4 @@
 {
-    "image1": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAABERAAAAAAAAEQEAAAAAAAARAAAgUgAAERERAVAEABCZGRERQgUAEREREREiUiAiEZmZEQAgABERERERIlIAEJkZERFSBAAAERERAUAFAAAAEQAAIFIAAAARAQAAAAAAABERAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "vaisseau"
-    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

@@ -407,3 +407,9 @@ game.splash("Le Refuge hanté!")
 effects.blizzard.startScreenEffect(2000)
 
 ```
+
+## Étape 4
+
+Bravo !
+
+Tu as maintenant terminé le tutoriel. Essaie ton jeu !
