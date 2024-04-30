@@ -487,3 +487,50 @@ info.onScore(5, function () {
 })
 
 ```
+
+## Étape 13
+
+** Défi supplémentaire ! **
+
+Ajoute une animation quand le bouton A est appuyé.
+
+Le bouton doit être enfoncé et relâché. 
+
+Modifie les images de l'animation.
+
+Regarde l'indice pour bien positionner l'animation.
+
+```blocks
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    let mySprite: Sprite = null
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    false
+    )
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
+```
