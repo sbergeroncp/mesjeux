@@ -187,3 +187,20 @@ true
 )
 
 ```
+
+## Étape 5
+
+** Défi supplémentaire ! **
+
+Le lutin doit changer d'animation quand le bouton droite/gauche est appuyé.
+
+```blocks
+
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
+
+```
