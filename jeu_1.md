@@ -412,4 +412,6 @@ effects.blizzard.startScreenEffect(2000)
 
 Bravo !
 
-Tu as maintenant terminé le tutoriel. Essaie ton jeu !
+Tu as maintenant terminé le tutoriel.
+
+Essaie ton jeu !

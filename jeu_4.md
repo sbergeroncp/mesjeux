@@ -663,3 +663,11 @@ forever(function () {
 
 ```
 
+## Étape 13
+
+** Défi supplémentaire ! **
+
+Le lutin principal (poisson) doit changer d'animation quand le bouton droite/gauche est appuyé.
+
+Le lutin secondaire (requin) doit changer d'animation lorsqu'il se déplace..
+

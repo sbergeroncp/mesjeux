@@ -583,6 +583,8 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Les lutins doivent toujours rester à l'écran.
 
+Regarde l'indice. Ajoute les blocs à l'endroit approprié.
+
 ```blocks
 
 let mySprite = sprites.create(img`
