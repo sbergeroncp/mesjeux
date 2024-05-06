@@ -43,6 +43,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 info.onScore(100, function () {
     game.gameOver(true)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    game.splash("", "")
+})
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
 scene.setBackgroundImage(img`
@@ -168,7 +171,6 @@ scene.setBackgroundImage(img`
     ................................................................................................................................................................
     `)
 effects.confetti.startScreenEffect(500)
-game.splash("", "")
 mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -206,12 +208,18 @@ mySprite2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 mySprite.setVelocity(50, 50)
-mySprite.setPosition(0, 0)
+mySprite.setPosition(randint(0, 10), 0)
 mySprite.setStayInScreen(true)
 controller.moveSprite(mySprite)
 
 
 ```
+
+## @showdialog
+
+Utilise également les variantes des blocs.
+
+Par exemple, le bouton ``||scroller:quand bouton A est appuyé ||`` est disponible. Tu peux également utiliser le bouton ``||scroller:quand bouton B est appuyé ||``.
 
 ## @showdialog
 

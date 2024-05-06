@@ -185,4 +185,10 @@ controller.moveSprite(mySprite)
 
 ## @showdialog
 
+*** Utilise également les variantes des blocs. ***
+
+Par exemple, le bouton ``||scroller:quand bouton A est appuyé ||`` est disponible. Tu peux également utiliser le bouton ``||scroller:quand bouton B est appuyé ||``.
+
+## @showdialog
+
 N'appuie pas sur le bouton ** TERMINÉ **.
