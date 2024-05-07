@@ -563,7 +563,7 @@ let mySprite = sprites.create(img`
 
 ** Défi supplémentaire ! **
 
-Le lutin doit se déplacer avec les flèches droite et gauche.
+Le lutin doit se déplacer avec les boutons.
 
 ```blocks
 
