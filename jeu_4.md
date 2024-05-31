@@ -663,11 +663,64 @@ forever(function () {
 
 ```
 
-## Étape 13
+## Étape 21
 
 ** Défi supplémentaire ! **
 
-Le lutin principal (poisson) doit changer d'animation quand le bouton droite/gauche est appuyé.
+Le lutin principal (``||sprites:poisson||``) change d'animation quand le bouton droite/gauche est appuyé.
 
-Le lutin secondaire (requin) doit changer d'animation lorsqu'il se déplace..
+Le lutin secondaire (``||sprites:requin||``) change d'animation lorsqu'il se déplace.
 
+Regarde l'indice.
+
+```blocks
+
+game.onUpdateInterval(500, function () {
+    let mySprite: Sprite = null
+    animation.runImageAnimation(
+    mySprite,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    500,
+    false
+    )
+})
+
+```
+
+## Étape 22
+
+** Défi supplémentaire ! **
+
+Apporte les modifications nécessaires au jeu pour que les lutins apparaissent au temps demandé :
+- (``||sprites:requin||``) : 6000 ms
+- (``||sprites:cerise||``) : 1000 ms
+
+Regarde l'indice au besoin.
+
+```blocks
+
+game.onUpdateInterval(500, function () {
+	
+})
+game.onUpdateInterval(500, function () {
+	
+})
+
+```
