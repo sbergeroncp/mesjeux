@@ -180,26 +180,14 @@ La valeur ``||sprites:50||`` de droite demeure la même.
 
 let alpha: Sprite = null
 game.onUpdateInterval(1000, function () {
-    alpha = sprites.createProjectileFromSide(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, 0, 50)
+    alpha = sprites.createProjectileFromSide(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile, 0, 50)
 })
 
+
+```
+
+```package
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
 ## Étape 11
