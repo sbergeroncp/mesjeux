@@ -58,6 +58,7 @@ scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
+
 ```
 
 ```package
@@ -164,13 +165,29 @@ game.onUpdateInterval(5000, function () {
 
 ```
 
-## Étape 10
+## Étape 10A
 
 Ajoute le bloc ``||variables:définir projectile||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||game:quand||``.
 
 Renomme la valeur ``||variable:projectile||`` par ``||variable:alpha||``.
 
 Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
+
+*** ou ***
+
+Utilise l'indice au besoin pour dessiner un vaisseau spatial ennemi.
+
+
+```blocks
+
+game.onUpdateInterval(1000, function () {
+let alpha = sprites.createProjectileFromSprite(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile, 50,0)
+
+})
+
+```
+
+## Étape 10B
 
 Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:0||``.
 
@@ -180,14 +197,26 @@ La valeur ``||sprites:50||`` de droite demeure la même.
 
 let alpha: Sprite = null
 game.onUpdateInterval(1000, function () {
-    alpha = sprites.createProjectileFromSide(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile, 0, 50)
+    alpha = sprites.createProjectileFromSide(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, 0, 50)
 })
 
-
-```
-
-```package
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
 ## Étape 11
