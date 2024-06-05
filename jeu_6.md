@@ -50,35 +50,23 @@ Renomme la valeur ``||variables:mySprite||`` par ``||variables:vaisseau||``.
 
 Clique sur le carré gris et dessine un vaisseau spatial qui pointe vers le haut.
 
+Regarde l'indice au besoin.
+
 ```blocks
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
+```
 
+```package
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:Contrôleur||``) sous le bloc ``||variables:définir mySprite||``.
+Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:Contrôleur||``) sous le bloc ``||variables:définir vaisseau||``.
 
 Remplace la valeur ``||variables:mySprite||`` par ``||variables:vaisseau||``.
 
@@ -91,24 +79,7 @@ Remplace les valeurs ``||scroller:100||`` par ``||scroller:125||``.
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 
 ```
@@ -126,24 +97,7 @@ Assure-toi que le bloc soit ``||animation:activé||``.
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
 
@@ -166,24 +120,7 @@ Sélectionne les valeurs ci-dessous :
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
 info.setScore(0)
@@ -203,24 +140,7 @@ Remplace la valeur ``||music:20||`` par ``||music:255||``.
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect()
-let vaisseau = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
 info.setScore(0)
@@ -609,7 +529,7 @@ game.onUpdateInterval(5000, function () {
 
 Pour le bloc ``||sprites:définir x||`` :
 
-Remplace la valeur ``||variable:beta||`` par ``||variable:charlie||``.
+Remplace la valeur ``||variable:alpha||`` par ``||variable:charlie||``.
 
 Les valeurs ``||math:5||`` et ``||math:155||`` demeurent les mêmes.
 

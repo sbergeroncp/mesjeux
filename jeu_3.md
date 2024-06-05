@@ -631,6 +631,8 @@ Les lutins doivent toujours rester à l'écran.
 
 Regarde l'indice. Ajoute les blocs à l'endroit approprié.
 
+** Est-ce nécessaire d'ajouter un nouveau bloc ``||loops:au démarrage||`` ?**
+
 ```blocks
 
 let mySprite = sprites.create(img`
