@@ -667,9 +667,9 @@ forever(function () {
 
 ** Défi supplémentaire ! **
 
-Le lutin principal (``||sprites:poisson||``) change d'animation quand le bouton droite/gauche est appuyé.
+Le lutin principal ``||variables:poisson||`` change d'animation quand le bouton droite/gauche est appuyé.
 
-Le lutin secondaire (``||sprites:requin||``) change d'animation lorsqu'il se déplace.
+Le lutin secondaire ``||variables:requin||`` change d'animation lorsqu'il se déplace.
 
 Regarde l'indice.
 
@@ -709,17 +709,18 @@ game.onUpdateInterval(500, function () {
 ** Défi supplémentaire ! **
 
 Apporte les modifications nécessaires au jeu pour que les lutins apparaissent au temps demandé :
-- (``||sprites:requin||``) : 6000 ms
-- (``||sprites:cerise||``) : 1000 ms
+
+- ``||variables:requin||``: 6000 ms
+- ``||variables:cerise||`` : 1500 ms
 
 Regarde l'indice au besoin.
 
 ```blocks
 
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(6000, function () {
 	
 })
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(1500, function () {
 	
 })
 

@@ -3,6 +3,7 @@
 ## @showdialog
 
 Programme deux lutins et un projectile.
+
 ## Étape 1
 
 Ajoute le bloc ``||scene:définir la couleur d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
@@ -11,7 +12,7 @@ Choisis une couleur.
 
 ```blocks
 
-scene.setBackgroundColor(8)
+scene.setBackgroundColor(1)
 
 ```
 
