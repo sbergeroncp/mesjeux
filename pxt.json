@@ -24,7 +24,8 @@
         "test_1.md",
         "bonus_a.md",
         "bonus_b.md",
-        "test_2.md"
+        "test_2.md",
+        "jeu_2b.md"
     ],
     "testFiles": [
         "test.ts"
