@@ -178,9 +178,12 @@ mySprite = sprites.create(img`
     `, SpriteKind.Player)
 mySprite.setStayInScreen(true)
 controller.moveSprite(mySprite)
+scroller.scrollBackgroundWithSpeed(-50, -50)
 
+```
 
-
+```package
+arcade-background-scroll=github:microsoft/arcade-background-scroll
 ```
 
 ## @showdialog
