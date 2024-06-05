@@ -181,7 +181,7 @@ Utilise l'indice au besoin pour dessiner un vaisseau spatial ennemi.
 ```blocks
 
 game.onUpdateInterval(1000, function () {
-let alpha = sprites.createProjectileFromSprite(tutorial_asset_exemple.ennemi_1, 50,0)
+let alpha = sprites.createProjectileFromSide(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile, 0, 50)
 
 })
 
