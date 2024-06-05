@@ -175,13 +175,13 @@ Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un mét�
 
 *** ou ***
 
-Utilise l'indice au besoin pour dessiner un vaisseau spatial ennemi.
+Utilise l'indice pour dessiner un vaisseau spatial ennemi.
 
 
 ```blocks
 
 game.onUpdateInterval(1000, function () {
-let alpha = sprites.createProjectileFromSide(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile, 0, 50)
+let alpha = sprites.create(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile)
 
 })
 
@@ -338,13 +338,28 @@ game.onUpdateInterval(2500, function () {
 
 ```
 
-## Étape 14
+## Étape 14A
 
 Pour le bloc ``||variables:définir alpha||`` :
 
 Renomme la valeur ``||variable:alpha||`` par ``||variable:beta||``.
 
 Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
+
+*** ou ***
+
+Utilise l'indice pour dessiner un vaisseau spatial ennemi.
+
+```blocks
+
+game.onUpdateInterval(1000, function () {
+let beta = sprites.create(tutorial_asset_exemple.ennemi_2, SpriteKind.Projectile)
+
+})
+
+```
+
+## Étape 14B
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
@@ -499,13 +514,28 @@ game.onUpdateInterval(5000, function () {
 
 ```
 
-## Étape 18
+## Étape 18A
 
 Pour le bloc ``||variables:définir alpha||`` :
 
 Renomme la valeur ``||variable:alpha||`` par ``||variable:charlie||``.
 
 Clique sur le carré gris pour sélectionner un lutin (un astéroïde / un météorite) dans la Galerie.
+
+*** ou ***
+
+Utilise l'indice pour dessiner un vaisseau spatial ennemi.
+
+```blocks
+
+game.onUpdateInterval(1000, function () {
+let charlie = sprites.create(tutorial_asset_exemple.ennemi_3, SpriteKind.Projectile)
+
+})
+
+```
+
+## Étape 18B
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
