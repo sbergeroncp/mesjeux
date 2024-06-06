@@ -34,11 +34,13 @@ Ajoute le bloc ``||scene:démarrer effet||`` (onglet ``||scene:Scène||``) sous 
 
 Remplace la valeur ``||scene:confetti||`` par ``||scene:champ étoilé||``.
 
+Remplace la valeur ``||scene:200||`` par ``||scene:60000||``.
+
 ```blocks
 
 scene.setBackgroundColor(15)
-game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+game.splash("Gradius", "X")
+effects.starField.startScreenEffect(60000)
 
 ```
 
@@ -50,13 +52,17 @@ Renomme la valeur ``||variables:mySprite||`` par ``||variables:vaisseau||``.
 
 Clique sur le carré gris et dessine un vaisseau spatial qui pointe vers le haut.
 
+*** ou ***
+
+Sélectionn le vaisseau spatial dans la Galerie.
+
 Regarde l'indice au besoin.
 
 ```blocks
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 
 ```
@@ -79,7 +85,7 @@ Remplace les valeurs ``||scroller:100||`` par ``||scroller:125||``.
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 
@@ -97,7 +103,7 @@ Assure-toi que le bloc soit ``||animation:activé||``.
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
@@ -120,7 +126,7 @@ Sélectionne les valeurs ci-dessous :
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
@@ -140,7 +146,7 @@ Remplace la valeur ``||music:20||`` par ``||music:255||``.
 
 scene.setBackgroundColor(15)
 game.splash("Gradius", "V")
-effects.starField.startScreenEffect()
+effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 controller.moveSprite(vaisseau, 125, 125)
 vaisseau.setStayInScreen(true)
@@ -191,7 +197,7 @@ let alpha = sprites.create(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectil
 
 Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:0||``.
 
-La valeur ``||sprites:50||`` de droite demeure la même.
+Remplace la valeur ``||sprites:50||`` de droite par ``||sprites:25||``.
 
 ```blocks
 
@@ -214,7 +220,7 @@ game.onUpdateInterval(1000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 50)
+        `, 0, 25)
 })
 
 ```
@@ -252,7 +258,7 @@ game.onUpdateInterval(1000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 50)
+        `, 0, 25)
     alpha.x = randint(5, 155)
 })
 
@@ -292,7 +298,7 @@ game.onUpdateInterval(1000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 50)
+        `, 0, 25)
     alpha.x = randint(5, 155)
     alpha.setKind(SpriteKind.ennemi1)
 })
@@ -330,7 +336,7 @@ game.onUpdateInterval(2500, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 50)
+        `, 0, 25)
     alpha.x = randint(5, 155)
     alpha.setKind(SpriteKind.ennemi1)
 })
@@ -363,7 +369,7 @@ let beta = sprites.create(tutorial_asset_exemple.ennemi_2, SpriteKind.Projectile
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
-Remplace la valeur ``||sprites:50||`` par ``||sprites:75||``.
+Remplace la valeur ``||sprites:25||`` de droite par ``||sprites:50||``.
 
 ```blocks
 
@@ -389,7 +395,7 @@ game.onUpdateInterval(1000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 75)
+        `, 0, 50)
     beta.x = randint(5, 155)
     beta.setKind(SpriteKind.ennemi2)
 })
@@ -429,7 +435,7 @@ game.onUpdateInterval(2500, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 75)
+        `, 0, 50)
     beta.x = randint(5, 155)
     beta.setKind(SpriteKind.ennemi2)
 })
@@ -470,7 +476,7 @@ game.onUpdateInterval(2500, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 75)
+        `, 0, 50)
     beta.x = randint(5, 155)
     beta.setKind(SpriteKind.ennemi2)
 })
@@ -539,7 +545,7 @@ let charlie = sprites.create(tutorial_asset_exemple.ennemi_3, SpriteKind.Project
 
 La valeur ``||sprites:0||`` de gauche demeure la même.
 
-Remplace la valeur ``||sprites:50||`` par ``||sprites:100||``.
+Remplace la valeur ``||sprites:50||`` par ``||sprites:75||``.
 
 ```blocks
 
@@ -565,7 +571,7 @@ game.onUpdateInterval(5000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 100)
+        `, 0, 75)
     charlie.x = randint(5, 155)
     charlie.setKind(SpriteKind.ennemi3)
 })
@@ -604,7 +610,7 @@ game.onUpdateInterval(5000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 100)
+        `, 0, 75)
     charlie.x = randint(5, 155)
     charlie.setKind(SpriteKind.ennemi3)
 })
@@ -645,7 +651,7 @@ game.onUpdateInterval(5000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, 0, 100)
+        `, 0, 75)
     charlie.x = randint(5, 155)
     charlie.setKind(SpriteKind.ennemi3)
 })
@@ -659,6 +665,10 @@ Glisse le bloc ``||scroller:quand bouton A est pressé||`` (onglet ``||scroller:
 Ajoute le bloc ``||variables:définir projectile||`` dans le bloc ``||scroller:quand bouton A est pressé||``.
 
 Clique sur le carré gris et dessine un petit missile qui pointe vers le haut.
+
+*** ou ***
+
+Sélectionne une boule de feu dans la galerie.
 
 ```blocks
 
@@ -724,7 +734,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Ajoute le bloc ``||music:play jusqu'à la fin|`` (onglet ``||music:Musique||``) sous le bloc ``||variables:définir projectile||``.
 
-Remplace la valeur ``||music:sound ba ding|`` par ``||music:sound zapper|``.
+Remplace la valeur ``||music:sound ba ding|`` par ``||music:sound zapped|``.
 
 Remplace la valeur ``||music:jusqu'à la fin|`` par ``||music:in background|`` (trad. : en arrière-plan).
 
