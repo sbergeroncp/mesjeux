@@ -83,13 +83,53 @@ mySprite.setPosition(145, 10)
 
 ```
 
-## Étape 4
+## Étape 4A
 
 Ajoute le bloc ``||sprites:définir la vitesse||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||sprites:définir la position||``.
 
 Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:-15||``.
 
 Remplace la valeur ``||sprites:50||`` de droite par ``||sprites:0||``.
+
+```blocks
+
+scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
+let mySprite = sprites.create(img`
+    ....ffffff.........ccc..
+    ....ff22ccf.......cc4f..
+    .....ffccccfff...cc44f..
+    ....cc24442222cccc442f..
+    ...c9b4422222222cc422f..
+    ..c999b2222222222222fc..
+    .c2b99111b222222222c22c.
+    c222b111992222ccccccc22f
+    f222222222222c222ccfffff
+    .f2222222222442222f.....
+    ..ff2222222cf442222f....
+    ....ffffffffff442222c...
+    .........f2cfffc2222c...
+    .........fcc2ffffffff...
+    ..........fc2ffff.......
+    ...........fffff........
+    `, SpriteKind.Player)
+mySprite.setPosition(145, 10)
+mySprite.setVelocity(-15, 0)
+
+```
+
+## Étape 4B
+
+Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||`` dans Avancé) sous le bloc ``||sprites:définir la vitesse||``.
+
+Sélectionne les valeurs ci-dessous :
+
+► ``||animation:animer||`` : ``||variables:mySprite||``
+
+► ``||animation:trames||`` : appuie sur le carré vide pour ajouter une ressource et sélectionne l'animation correspondant à ton lutin dans l'onglet Galerie
+
+► ``||animation:intervalle (ms)||`` : 200 
+
+► ``||animation:en boucle||`` : activé
 
 ```blocks
 
