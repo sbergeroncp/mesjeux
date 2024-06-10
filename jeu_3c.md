@@ -22,561 +22,279 @@ tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
 ## Étape 2
 
-Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir la couleur d'arrière-plan||``.
+Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir image d'arrière-plan||``.
 
-Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+Clique sur le carré gris et sélectionne l'avion qui pointe vers la gauche.
 
 ```blocks
 
-scene.setBackgroundColor(1)
+scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
+    ....ffffff.........ccc..
+    ....ff22ccf.......cc4f..
+    .....ffccccfff...cc44f..
+    ....cc24442222cccc442f..
+    ...c9b4422222222cc422f..
+    ..c999b2222222222222fc..
+    .c2b99111b222222222c22c.
+    c222b111992222ccccccc22f
+    f222222222222c222ccfffff
+    .f2222222222442222f.....
+    ..ff2222222cf442222f....
+    ....ffffffffff442222c...
+    .........f2cfffc2222c...
+    .........fcc2ffffffff...
+    ..........fc2ffff.......
+    ...........fffff........
     `, SpriteKind.Player)
 
 ```
 
 ## Étape 3
 
-Ajoute le bloc ``||scroller:déplacer avec les boutons||`` (onglet ``||scroller:Contrôleur||``) sous le bloc ``||variables:définir mySprite||``.
+Ajoute le bloc ``||sprites:définir la position||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||variables:définir mySprite||``.
+
+Remplace la valeur ``||sprites:0||`` de gauche par ``||sprites:145||``.
+
+Remplace la valeur ``||sprites:0||`` de droite par ``||sprites:10||``.
 
 ```blocks
 
-scene.setBackgroundColor(1)
+scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
+    ....ffffff.........ccc..
+    ....ff22ccf.......cc4f..
+    .....ffccccfff...cc44f..
+    ....cc24442222cccc442f..
+    ...c9b4422222222cc422f..
+    ..c999b2222222222222fc..
+    .c2b99111b222222222c22c.
+    c222b111992222ccccccc22f
+    f222222222222c222ccfffff
+    .f2222222222442222f.....
+    ..ff2222222cf442222f....
+    ....ffffffffff442222c...
+    .........f2cfffc2222c...
+    .........fcc2ffffffff...
+    ..........fc2ffff.......
+    ...........fffff........
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
+mySprite.setPosition(145, 10)
 
 ```
 
 ## Étape 4
 
-Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scroller:déplacer avec les boutons||``.
+Ajoute le bloc ``||sprites:définir la vitesse||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||sprites:définir la position||``.
 
-Assure-toi que la valeur ``||variables:définir mySprite2||`` soit sélectionnée.
+Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:-15||``.
 
-Remplace la valeur ``||Sprites:Player||`` par ``||Sprites:Food||``.
-
-Clique sur le carré gris pour sélectionner un lutin dans la Galerie.
+Remplace la valeur ``||sprites:50||`` de droite par ``||sprites:0||``.
 
 ```blocks
 
-scene.setBackgroundColor(1)
+scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
+    ....ffffff.........ccc..
+    ....ff22ccf.......cc4f..
+    .....ffccccfff...cc44f..
+    ....cc24442222cccc442f..
+    ...c9b4422222222cc422f..
+    ..c999b2222222222222fc..
+    .c2b99111b222222222c22c.
+    c222b111992222ccccccc22f
+    f222222222222c222ccfffff
+    .f2222222222442222f.....
+    ..ff2222222cf442222f....
+    ....ffffffffff442222c...
+    .........f2cfffc2222c...
+    .........fcc2ffffffff...
+    ..........fc2ffff.......
+    ...........fffff........
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
+mySprite.setPosition(145, 10)
+mySprite.setVelocity(-15, 0)
 
 ```
 
 ## Étape 5
 
-Ajoute le bloc ``||info:définir le score||`` (onglet ``||info:Info||``) sous le bloc ``||variables:définir mySprite2||``.
+Ajoute le bloc ``||sprites:définir projectile||`` (onglet ``||Sprites:Sprites||``) dans le bloc ``||controler:quand bouton A est appuyué||``.
 
-La valeur ``||info:0||`` demeure la même.
+Remplace la valeur ``||sprites:50||`` de gauche par ``||sprites:0||``.
+
+La valeur ``||sprites:50||`` de droite demeure la même.
 
 ```blocks
 
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-info.setScore(0)
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 3 1 3 . . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . 2 1 1 1 2 . . . . . 
+        . . . . . . 2 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . . 2 2 2 . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, mySprite, 0, 50)
+})
 
 ```
 
 ## Étape 6
 
-Glisse le bloc ``||Sprites:quand||`` (onglet ``||Sprites:Sprites||``) dans la zone de programmation.
+Crée une fonction (onglet ``||Functions:Fonctions||``) et donne-lui le nom Surprise.
 
-Remplace la valeur ``||Sprites:Player||`` de droite par la valeur ``||Sprites:Food||``.
+Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||`` dans Avancé) dans le bloc ``||functions:Surprise||``.
+
+Sélectionne les valeurs ci-dessous :
+
+► ``||animation:animer||`` : ``||variables:projectile||``
+
+► ``||animation:trames||`` : appuie sur le carré vide pour ajouter une ressource et sélectionne l'animation correspondant à ton projectile dans l'onglet Galerie
+
+► ``||animation:intervalle (ms)||`` : 200 
+
+► ``||animation:en boucle||`` : désactivé
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-	
-})
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-    
+function Surprise () {
+    animation.runImageAnimation(
+    projectile,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 3 1 3 . . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . 2 1 1 1 2 . . . . . 
+        . . . . . . 2 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . . 2 2 2 . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 2 3 3 3 3 3 2 . . . . 
+        . . . . 3 1 1 1 1 1 1 1 3 . . . 
+        . . . . 1 1 1 1 1 1 1 1 1 . . . 
+        . . . 2 1 1 1 1 1 1 1 1 1 2 . . 
+        . . . 2 3 1 1 1 1 1 1 3 3 2 . . 
+        . . . . . . 2 2 2 2 2 . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 4 4 4 4 4 . . . . . . 
+        . . . 4 4 4 5 5 5 d 4 4 4 4 . . 
+        . . 4 d 5 d 5 5 5 d d d 4 4 . . 
+        . . 4 5 5 1 1 1 d d 5 5 5 4 . . 
+        . 4 5 5 5 1 1 1 5 1 1 5 5 4 4 . 
+        . 4 d d 1 1 5 5 5 1 1 5 5 d 4 . 
+        . 4 5 5 1 1 5 1 1 5 5 d d d 4 . 
+        . 2 5 5 5 d 1 1 1 5 1 1 5 5 2 . 
+        . 2 d 5 5 d 1 1 1 5 1 1 5 5 2 . 
+        . . 2 4 d d 5 5 5 5 d d 5 4 . . 
+        . . . 2 2 4 d 5 5 d d 4 4 . . . 
+        . . 2 2 2 2 2 4 4 4 2 2 2 . . . 
+        . . . 2 2 4 4 4 4 4 4 2 2 . . . 
+        . . . . . 2 2 2 2 2 2 . . . . . 
+        `,img`
+        . . . . 2 2 2 2 2 2 2 2 . . . . 
+        . . . 2 4 4 4 5 5 4 4 4 2 2 2 . 
+        . 2 2 5 5 d 4 5 5 5 4 4 4 4 2 . 
+        . 2 4 5 5 5 5 d 5 5 5 4 5 4 2 2 
+        . 2 4 d d 5 5 5 5 5 5 d 4 4 4 2 
+        2 4 5 5 d 5 5 5 d d d 5 5 5 4 4 
+        2 4 5 5 4 4 4 d 5 5 d 5 5 5 4 4 
+        4 4 4 4 . . 2 4 5 5 . . 4 4 4 4 
+        . . b b b b 2 4 4 2 b b b b . . 
+        . b d d d d 2 4 4 2 d d d d b . 
+        b d d b b b 2 4 4 2 b b b d d b 
+        b d d b b b b b b b b b b d d b 
+        b b d 1 1 3 1 1 d 1 d 1 1 d b b 
+        . . b b d d 1 1 3 d d 1 b b . . 
+        . . 2 2 4 4 4 4 4 4 4 4 2 2 . . 
+        . . . 2 2 4 4 4 4 4 2 2 2 . . . 
+        `,img`
+        . . . . . . . . b b . . . . . . 
+        . . . . . . . . b b . . . . . . 
+        . . . b b b . . . . . . . . . . 
+        . . b d d b . . . . . . . b b . 
+        . b d d d b . . . . . . b d d b 
+        . b d d b . . . . b b . b d d b 
+        . b b b . . . . . b b . . b b . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . b b b d d d d d d b b b . . 
+        . b d c c c b b b b c c d d b . 
+        b d d c b . . . . . b c c d d b 
+        c d d b b . . . . . . b c d d c 
+        c b d d d b b . . . . b d d c c 
+        . c c b d d d d b . c c c c c c 
+        . . . c c c c c c . . . . . . . 
+        `],
+    200,
+    false
+    )
+}
 ```
 
 ## Étape 7
 
-Ajoute le bloc ``||info:modifier le score||`` dans le bloc ``||Sprites:quand||``.
+Ajoute le bloc ``||functions:appel Surprise||`` (onglet ``||functions:Fonctions||``) dans le bloc ``||controler:quand bouton A est appuyué||``.
 
-La valeur ``||info:1||`` du bloc ``||info:modifier le score||`` demeure la même.
+Remplace la valeur ``||controler:A||`` par ``||controler:B||``.
 
 ```blocks
 
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    Surprise()
 })
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-    
-```
-
-## Étape 8
-
-Ajoute le bloc ``||Sprites:définir la position||`` (onglet ``||Sprites:Sprites)||`` sous le bloc ``||info:modifier le score||``.
-
-Remplace la valeur ``||variables:mySprite||`` par ``||variables:mySprite2||``.
-
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(0, 0)
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-    
-```
-
-## Étape 9
-
-Remplace les valeurs ``||Sprites:0||`` du bloc ``||Sprites:définir la position||`` par les blocs ``||math:choisir aléatoirement entre||`` (onglet ``||math:Maths||``).
-
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, 10), randint(0, 10))
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-    
-
-```
-
-## Étape 10
-
-Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:x||``.
-
-Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:largeur de l'écran||``.
-
-Regarde bien l'indice !
-
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, 10))
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
-
-```
-
-## Étape 11
-
-Modifie le bloc ``||math:choisir aléatoirement entre||`` pour la valeur ``||Sprites:y||``.
-
-Remplace la valeur ``||math:10||`` du bloc ``||math:choisir aléatoirement entre||`` par le bloc ``||scene:hauteur de l'écran||``.
-
-Regarde bien l'indice.
-
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
-
-```
-
-## Étape 12
-
-Ajoute le bloc ``||info:démarrer le compte à rebours||`` (onglet ``||info:Info||``) sous le bloc ``||Sprites:définir la position||``.
-
-Remplace la valeur ``||info:10||`` par ``||info:3||``.
-
-```blocks
-
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
-    mySprite2.setPosition(randint(0, scene.screenWidth()), randint(0, scene.screenHeight()))
-    info.startCountdown(3)
-})
-let mySprite2: Sprite = null
-scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-controller.moveSprite(mySprite)
-mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-
-```
-
-## Étape 13
-
-** Défi supplémentaire ! **
-
-Le lutin doit changer d'animation quand le bouton droite/gauche est appuyé.
-
-```blocks
-
-let mySprite: Sprite = null
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+function Surprise () {
     animation.runImageAnimation(
-    mySprite,
+    projectile,
     [img`
         . . . . . . . . . . . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 2 1 2 . . . . . . 
+        . . . . . . . 3 1 3 . . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . 2 1 1 1 2 . . . . . 
+        . . . . . . 2 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 3 1 1 1 3 . . . . . 
+        . . . . . . 2 3 1 3 2 . . . . . 
+        . . . . . . . 2 2 2 . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `,img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -587,95 +305,67 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
+        . . . . . 2 3 3 3 3 3 2 . . . . 
+        . . . . 3 1 1 1 1 1 1 1 3 . . . 
+        . . . . 1 1 1 1 1 1 1 1 1 . . . 
+        . . . 2 1 1 1 1 1 1 1 1 1 2 . . 
+        . . . 2 3 1 1 1 1 1 1 3 3 2 . . 
+        . . . . . . 2 2 2 2 2 . . . . . 
+        `,img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
+        . . . . . 4 4 4 4 4 . . . . . . 
+        . . . 4 4 4 5 5 5 d 4 4 4 4 . . 
+        . . 4 d 5 d 5 5 5 d d d 4 4 . . 
+        . . 4 5 5 1 1 1 d d 5 5 5 4 . . 
+        . 4 5 5 5 1 1 1 5 1 1 5 5 4 4 . 
+        . 4 d d 1 1 5 5 5 1 1 5 5 d 4 . 
+        . 4 5 5 1 1 5 1 1 5 5 d d d 4 . 
+        . 2 5 5 5 d 1 1 1 5 1 1 5 5 2 . 
+        . 2 d 5 5 d 1 1 1 5 1 1 5 5 2 . 
+        . . 2 4 d d 5 5 5 5 d d 5 4 . . 
+        . . . 2 2 4 d 5 5 d d 4 4 . . . 
+        . . 2 2 2 2 2 4 4 4 2 2 2 . . . 
+        . . . 2 2 4 4 4 4 4 4 2 2 . . . 
+        . . . . . 2 2 2 2 2 2 . . . . . 
+        `,img`
+        . . . . 2 2 2 2 2 2 2 2 . . . . 
+        . . . 2 4 4 4 5 5 4 4 4 2 2 2 . 
+        . 2 2 5 5 d 4 5 5 5 4 4 4 4 2 . 
+        . 2 4 5 5 5 5 d 5 5 5 4 5 4 2 2 
+        . 2 4 d d 5 5 5 5 5 5 d 4 4 4 2 
+        2 4 5 5 d 5 5 5 d d d 5 5 5 4 4 
+        2 4 5 5 4 4 4 d 5 5 d 5 5 5 4 4 
+        4 4 4 4 . . 2 4 5 5 . . 4 4 4 4 
+        . . b b b b 2 4 4 2 b b b b . . 
+        . b d d d d 2 4 4 2 d d d d b . 
+        b d d b b b 2 4 4 2 b b b d d b 
+        b d d b b b b b b b b b b d d b 
+        b b d 1 1 3 1 1 d 1 d 1 1 d b b 
+        . . b b d d 1 1 3 d d 1 b b . . 
+        . . 2 2 4 4 4 4 4 4 4 4 2 2 . . 
+        . . . 2 2 4 4 4 4 4 2 2 2 . . . 
+        `,img`
+        . . . . . . . . b b . . . . . . 
+        . . . . . . . . b b . . . . . . 
+        . . . b b b . . . . . . . . . . 
+        . . b d d b . . . . . . . b b . 
+        . b d d d b . . . . . . b d d b 
+        . b d d b . . . . b b . b d d b 
+        . b b b . . . . . b b . . b b . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . b b b d d d d d d b b b . . 
+        . b d c c c b b b b c c d d b . 
+        b d d c b . . . . . b c c d d b 
+        c d d b b . . . . . . b c d d c 
+        c b d d d b b . . . . b d d c c 
+        . c c b d d d d b . c c c c c c 
+        . . . c c c c c c . . . . . . . 
         `],
-    500,
+    200,
     false
     )
-})
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    mySprite,
-    [img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `],
-    500,
-    false
-    )
-})
-
-
-```
-
-## Étape 14
-
-** Défi supplémentaire ! **
-
-Les lutins doivent toujours rester à l'écran.
-
-Regarde l'indice. Ajoute les blocs à l'endroit approprié.
-
-** Est-ce nécessaire d'ajouter un nouveau bloc ``||loops:au démarrage||`` ?**
-
-```blocks
-
-let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . b 5 5 b . . . 
-    . . . . . . b b b b b b . . . . 
-    . . . . . b b 5 5 5 5 5 b . . . 
-    . b b b b b 5 5 5 5 5 5 5 b . . 
-    . b d 5 b 5 5 5 5 5 5 5 5 b . . 
-    . . b 5 5 b 5 d 1 f 5 d 4 f . . 
-    . . b d 5 5 b 1 f f 5 4 4 c . . 
-    b b d b 5 5 5 d f b 4 4 4 4 b . 
-    b d d c d 5 5 b 5 4 4 4 4 4 4 b 
-    c d d d c c b 5 5 5 5 5 5 5 b . 
-    c b d d d d d 5 5 5 5 5 5 5 b . 
-    . c d d d d d d 5 5 5 5 5 d b . 
-    . . c b d d d d d 5 5 5 b b . . 
-    . . . c c c c c c c c b b . . . 
-    `, SpriteKind.Player)
-let mySprite2 = sprites.create(img`
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 8 6 6 . . . 6 8 . . 
-    . . . e e e 8 8 6 6 . 6 7 8 . . 
-    . . e 2 2 2 2 e 8 6 6 7 6 . . . 
-    . e 2 2 4 4 2 7 7 7 7 7 8 6 . . 
-    . e 2 4 4 2 6 7 7 7 6 7 6 8 8 . 
-    e 2 4 5 2 2 6 7 7 6 2 7 7 6 . . 
-    e 2 4 4 2 2 6 7 6 2 2 6 7 7 6 . 
-    e 2 4 2 2 2 6 6 2 2 2 e 7 7 6 . 
-    e 2 4 2 2 4 2 2 2 4 2 2 e 7 6 . 
-    e 2 4 2 2 2 2 2 2 2 2 2 e c 6 . 
-    e 2 2 2 2 2 2 2 4 e 2 e e c . . 
-    e e 2 e 2 2 4 2 2 e e e c . . . 
-    e e e e 2 e 2 2 e e e c . . . . 
-    e e e 2 e e c e c c c . . . . . 
-    . c c c c c c c . . . . . . . . 
-    `, SpriteKind.Food)
-mySprite.setStayInScreen(true)
-mySprite2.setStayInScreen(true)
-
+}
 
 ```
