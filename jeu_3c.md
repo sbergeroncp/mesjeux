@@ -12,9 +12,12 @@ Choisis un arrière-plan.
 
 ```blocks
 
-scene.setBackgroundColor(1)
+scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
 
+```
 
+```package
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
 ## Étape 2
