@@ -11,7 +11,7 @@ Ajoute le bloc ``||scene:définir couleur d'arrière-plan||`` (onglet ``||scene:
 Clique sur le carré gris une couleur.
 
 ```blocks
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 
 ```
 
