@@ -11,7 +11,14 @@ Ajoute le bloc ``||scene:définir couleur d'arrière-plan||`` (onglet ``||scene:
 Clique sur le carré gris une couleur.
 
 ```blocks
+
 scene.setBackgroundImage(tutorial_asset_exemple.background1)
+
+```
+
+```package
+
+tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
 ```
 
@@ -65,10 +72,6 @@ game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
 
-```
-
-```package
-tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 ```
 
 ## Étape 5
