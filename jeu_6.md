@@ -6,9 +6,9 @@ Mon premier Shoot 'Em Up !
 
 ## Étape 1
 
-Ajoute le bloc ``||scene:définir couleur d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
+Ajoute le bloc ``||scene:définir image d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
 
-Clique sur le carré gris une couleur.
+Clique sur le carré gris et sélectionne la même image que dans l'indice.
 
 ```blocks
 
@@ -45,7 +45,7 @@ Remplace la valeur ``||scene:200||`` par ``||scene:60000||``.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "X")
 effects.starField.startScreenEffect(60000)
 
@@ -67,7 +67,7 @@ Regarde l'indice au besoin.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
@@ -86,7 +86,7 @@ Remplace les valeurs ``||scroller:100||`` par ``||scroller:125||``.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
@@ -104,7 +104,7 @@ Assure-toi que le bloc soit ``||animation:activé||``.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
@@ -127,7 +127,7 @@ Sélectionne les valeurs ci-dessous :
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
@@ -147,7 +147,7 @@ Remplace la valeur ``||music:20||`` par ``||music:255||``.
 
 ```blocks
 
-scene.setBackgroundColor(15)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 game.splash("Gradius", "V")
 effects.starField.startScreenEffect(60000)
 let vaisseau = sprites.create(tutorial_asset_exemple.spaceship_1, SpriteKind.Player)
