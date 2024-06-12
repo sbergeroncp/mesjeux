@@ -12,7 +12,7 @@ Choisis un arrière-plan.
 
 ```blocks
 
-scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
+scene.setBackgroundImage(tutorial_asset_exemple.background1)
 
 ```
 
