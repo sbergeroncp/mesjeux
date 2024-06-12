@@ -12,7 +12,7 @@ Choisis un arrière-plan.
 
 ```blocks
 
-scene.setBackgroundImage(tutorial_asset_exemple.background1)
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
 
 ```
 
@@ -28,7 +28,7 @@ Clique sur le carré gris et sélectionne l'avion qui pointe vers la gauche.
 
 ```blocks
 
-scene.setBackgroundImage(tutorial_asset_exemple.screen_1)
+scene.setBackgroundImage(tutorial_asset_exemple.background2)
 let mySprite = sprites.create(img`
     ....ffffff.........ccc..
     ....ff22ccf.......cc4f..
