@@ -139,7 +139,7 @@ scene.setBackgroundImage(img`
 
 ## Étape 2
 
-Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir la couleur d'arrière-plan||``.
+Ajoute le bloc ``||variables:définir mySprite||`` (onglet ``||Sprites:Sprites||``) sous le bloc ``||scene:définir l'image d'arrière-plan||``.
 
 Choisis la même voiture que dans l'indice.
 
