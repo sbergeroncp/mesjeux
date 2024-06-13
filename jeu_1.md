@@ -275,7 +275,7 @@ game.splash("Le Refuge hanté")
 
 Ajoute le bloc ``||scene:démarrer effet sur l'écran||`` (onglet ``||scene:Scène||``) sous le bloc ``||game:splash||``.
 
-Choisis un effet. 
+Choisis l'effet tempête.
 
 Appuie sur le bouton ``||scene:+||`` et modifie la valeur ``||scene:500||`` par ``||scene:2000||``.
 

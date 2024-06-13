@@ -820,9 +820,11 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ## Étape 9
 
-** Défi supplémentaire ! **
-
 Le lutin doit changer d'animation quand le bouton haut/bas est appuyé.
+
+** Pour la flèche du bas : sélectionne une image sur laquelle la voiture pointe vers le bas. **
+
+** Pour la flèche du haut : sélectionne une image sur laquelle la voiture pointe vers le haut. **
 
 ```blocks
 
@@ -837,8 +839,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ## Étape 10
 
-** Défi supplémentaire ! **
-
 Colorie d'une couleur de ton choix les phares de la voiture.
 
-Attention tu dois colorier *toutes les images des animations*.
+Attention tu dois colorier *toutes les images des animations* **et** *l'image initiale*.
