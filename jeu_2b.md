@@ -722,7 +722,7 @@ controller.moveSprite(mySprite)
 
 Le lutin doit *se déplacer* **et** *être animé* avec les flèches droite et gauche.
 
-** Quels blocs manque-t-il dans l'indice ? **
+** Quels blocs manquent-t-ils dans l'indice ? **
 
 ```blocks
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
