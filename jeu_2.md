@@ -1,3 +1,27 @@
+```template
+effects.starField.startScreenEffect()
+let mySprite = sprites.create(img`
+    . . . . . . . 9 9 . . . . . . .
+    . . . . . . 9 . . 9 . . . . . .
+    . . . . . . 9 . . 9 . . . . . .
+    . . . . . 9 . 9 9 . 9 . . . . .
+    . . . . . 9 . 9 9 . 9 . . . . .
+    . . . . 9 . 9 9 9 9 . 9 . . . .
+    . . . . 9 . 9 9 9 9 . 9 . . . .
+    . . . 9 . 9 9 9 9 9 9 . 9 . . .
+    . . . 9 . 9 . . . . 9 . 9 . . .
+    . . 9 . 9 9 . 9 9 . 9 9 . 9 . .
+    . . 9 . 9 9 . . . . 9 9 . 9 . .
+    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
+    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
+    9 . 9 9 9 9 9 9 9 9 9 9 9 9 . 9
+    9 . . . . . . . . . . . . . . 9
+    9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
+`, SpriteKind.Player)
+controller.moveSprite(mySprite)
+mySprite.setFlag(SpriteFlag.StayInScreen, true)
+```
+
 # Tutoriel 2 A
 
 ## @showdialog
