@@ -1,4 +1,4 @@
-# Tutoriel - Bonus A
+# Tutoriel 2 - Bonus
 
 ## Étape 1
 
