@@ -458,7 +458,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 
 Ajoute le bloc ``||sprites:destroy||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||sprites:quand||``.
 
-Glisse le bloc ``||variables:otherSprite||`` dans le bloc ``||variables:mySprite||`` pour remplacer la valeur.
+Remplace la valeur ``||variables:mySprite||`` par ``||variables:otherSprite||``. Glisse celle du bloc ``||sprites:quand||``.
 
 Appuie sur le bouton ``||sprites:+||`` pour afficher plus d'options.
 
@@ -573,7 +573,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 
 Glisse le bloc ``||loops:toujours||`` (onglet ``||loops:Boucles||``) dans la zone de programmation.
 
-Ajoute trois blocs ``||sprites:rebondir à lécran||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||loops:toujours||``.
+Ajoute trois blocs ``||sprites:rebondir à sur mur / à l'écran||`` (onglet ``||sprites:Sprites||``) dans le bloc ``||loops:toujours||``.
 
 Remplace la valeur ``||variables:mySprite||`` du deuxième bloc par ``||variables:projectile||``.
 
