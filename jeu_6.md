@@ -24,7 +24,7 @@ tutorial_asset_exemple=github:sbergeroncp/tutorial_asset_exemple
 
 ## Étape 2
 
-Ajoute le bloc ``||game:splash||`` (onglet ``||game:Jeu||``) sous le bloc ``||scene:définir couleur d'arrière-plan||``.
+Ajoute le bloc ``||game:splash||`` (onglet ``||game:Jeu||``) sous le bloc ``||scene:définir image d'arrière-plan||``.
 
 Écris le nom de ton jeu dans le bloc ``||game:splash||``.
 
@@ -143,7 +143,7 @@ info.startCountdown(60)
 
 Ajoute le bloc ``||music:définir le volume||`` (onglet ``||music:Musique||``) sous le bloc ``||info:démarrer compte à rebours||``.
 
-Remplace la valeur ``||music:20||`` par ``||music:255||``.
+Remplace la valeur ``||music:20||`` par ``||music:200||``.
 
 ```blocks
 
@@ -156,7 +156,7 @@ vaisseau.setStayInScreen(true)
 info.setScore(0)
 info.setLife(3)
 info.startCountdown(60)
-music.setVolume(255)
+music.setVolume(200)
 
 ```
 
@@ -189,9 +189,26 @@ Utilise l'indice pour dessiner un vaisseau spatial ennemi.
 
 ```blocks
 
+let alpha: Sprite = null
 game.onUpdateInterval(1000, function () {
-let alpha = sprites.create(tutorial_asset_exemple.ennemi_1, SpriteKind.Projectile)
-
+    alpha = sprites.createProjectileFromSide(img`
+        . . . . . 2 2 . . . . . 
+        . . . 2 9 . . 9 2 . . . 
+        . . . . 2 9 9 2 . . . . 
+        . . . . f f f f . . . . 
+        . . . 8 8 1 f 8 8 . . . 
+        2 . . f 1 5 5 5 f . . 2 
+        . 2 2 2 4 5 5 4 2 2 2 . 
+        4 5 4 4 4 5 5 4 4 4 5 4 
+        . 4 4 4 2 5 5 2 4 4 4 . 
+        . 4 5 4 2 5 5 2 4 5 4 . 
+        . . 4 4 2 5 5 2 4 4 . . 
+        . . . 5 2 5 5 2 5 . . . 
+        . . . 4 2 5 5 2 4 . . . 
+        . . . . 5 5 5 5 . . . . 
+        . . . . . 6 6 . . . . . 
+        . . . . . 5 5 . . . . . 
+        `, 50, 50)
 })
 
 ```
