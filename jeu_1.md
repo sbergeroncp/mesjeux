@@ -6,7 +6,7 @@ Crée un écran d'accueil pour un ton premier jeu vidéo!
 
 ## Étape 1
 
-Ajoute le bloc ``||scene:définir l'image d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
+Ajoute le bloc ``||scene:définir image d'arrière-plan||`` (onglet ``||scene:Scène||``) dans le bloc ``||loops:au démarrage||``.
 
 Choisis une image dans la galerie.
 
@@ -139,7 +139,7 @@ scene.setBackgroundImage(img`
 
 ## Étape 2
 
-Ajoute le bloc ``||game:splash||`` (onglet ``||game:Jeu||``) sous le bloc ``||scene:définir l'image d'arrière-plan||``.
+Ajoute le bloc ``||game:splash||`` (onglet ``||game:Jeu||``) sous le bloc ``||scene:définir image d'arrière-plan||``.
 
 Écris le nom du jeu dans le bloc ``||game:splash||``. 
 

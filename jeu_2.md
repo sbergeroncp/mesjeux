@@ -77,7 +77,18 @@ controller.moveSprite(mySprite)
 
 ## Étape 4
 
-Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||`` dans Avancé) dans le bloc ``||scroller:quand le bouton A est appuyé||``.
+Glisse le bloc ``||scroller:quand le bouton A est appuyé||`` dans la zone de programmation.
+
+```blocks
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+})
+
+```
+
+## Étape 5
+
+Ajoute le bloc ``||animation:animer||`` (onglet ``||animation:Animation||``) dans le bloc ``||scroller:quand le bouton A est appuyé||``.
 
 Sélectionne les valeurs ci-dessous :
 
